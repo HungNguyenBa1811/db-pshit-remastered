@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/api/:path*",
-            "destination": "https://dbapi.ptit.edu.vn/api/:path*"
+            "destination": "/api/proxy/:path*"
         }
     ]
 }
