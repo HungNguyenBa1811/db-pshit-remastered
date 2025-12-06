@@ -37,7 +37,7 @@ const Login = () => {
                         <KeyRound className="w-8 h-8 text-primary" />
                     </div>
                     <h1 className="text-2xl font-bold mb-2">Welcome Back</h1>
-                    <p className="text-text-muted">Enter your DB PTIT access token to continue</p>
+                    <p className="text-text-muted">Enter your DB PSHIT access token to continue</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -72,7 +72,16 @@ const Login = () => {
 
                 <div className="mt-6 text-center">
                     <p className="text-xs text-text-muted">
-                        Don't have a token? Login to <a href="https://qldt.ptit.edu.vn" target="_blank" rel="noreferrer" className="text-primary hover:underline">QLDT</a> and check LocalStorage.
+                        Don't have a token? Login to{' '}
+                        <a
+                            href="https://db.ptit.edu.vn/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-primary hover:underline"
+                        >
+                            DB PSHIT
+                        </a>{' '}
+                        and check LocalStorage.
                     </p>
                 </div>
             </div>
