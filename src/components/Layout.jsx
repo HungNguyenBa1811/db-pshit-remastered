@@ -2,8 +2,8 @@ import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import problems from '../data/problems.json';
 import { useAuth } from '../contexts/AuthContext';
-import { LogOut, Code2, User, LayoutDashboard, ArrowLeft, ArrowRight } from 'lucide-react';
-import clsx from 'clsx';
+import { LogOut, Code2, User, ArrowLeft, ArrowRight } from 'lucide-react';
+// import clsx from 'clsx';
 
 const Layout = () => {
     const { user, logout } = useAuth();
@@ -79,7 +79,7 @@ const Layout = () => {
                                     max={problems.length}
                                     value={jumpIndex}
                                     onChange={(e) => setJumpIndex(e.target.value)}
-                                    className="w-16 text-sm text-black bg-white/3 text-text-main px-2 py-1 rounded border border-white/5 focus:outline-none"
+                                    className="w-16 text-sm text-black bg-white/3 px-2 py-1 rounded border border-white/5 focus:outline-none"
                                     aria-label="Jump to problem number"
                                 />
                             </form>

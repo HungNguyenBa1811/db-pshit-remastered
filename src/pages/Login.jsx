@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { KeyRound, ArrowRight, AlertCircle } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const [tokenInput, setTokenInput] = useState('');
@@ -83,6 +84,45 @@ const Login = () => {
                         </a>{' '}
                         and check LocalStorage.
                     </p>
+                    <div className="mt-4 text-left">
+                        <p className="text-sm text-text-muted mb-2">Quick steps to get your token:</p>
+
+                        <ol className="text-sm text-text-muted list-decimal list-inside mb-3">
+                            <li>
+                                Open <span className="font-medium">DB PSHIT</span> at{' '}
+                                <a
+                                    href="https://db.ptit.edu.vn/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-primary"
+                                >
+                                    db.ptit.edu.vn
+                                </a>{' '}
+                                and login.
+                            </li>
+                            <li>Open your browser DevTools (Console) and run the code below to see the token.</li>
+                        </ol>
+
+                        <div className="flex items-start gap-2">
+                            <pre className="flex-1 bg-black/20 rounded-xl p-3 font-mono text-sm overflow-auto">
+                                <code>localStorage.getItem("access_token")</code>
+                            </pre>
+                            <button
+                                onClick={async () => {
+                                    try {
+                                        await navigator.clipboard.writeText('localStorage.getItem("access_token")');
+                                        toast.success('Copied to clipboard');
+                                    } catch (e) {
+                                        toast.error('Copy failed');
+                                    }
+                                }}
+                                className="btn-primary px-3 py-2 text-sm"
+                                aria-label="Copy code"
+                            >
+                                Copy
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
