@@ -28,7 +28,7 @@ const SQLEditor = ({ value, onChange, disabled }) => {
                     style={{
                         fontFamily:
                             'Consolas, "Roboto Mono", "SFMono-Regular", Menlo, Monaco, "Courier New", monospace',
-                        fontSize: 13,
+                        fontSize: 18,
                         outline: 'none',
                         background: 'transparent',
                         color: 'var(--text-main, #e5e7eb)',
