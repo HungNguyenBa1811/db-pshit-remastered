@@ -4,7 +4,17 @@ import { localProblemsApi } from '../services/problemsData';
 import { executorApi } from '../services/api';
 import SQLEditor from '../components/SQLEditor';
 import ResultTable from '../components/ResultTable';
-import { Play, Send, Loader2, Database, CheckCircle2, XCircle, Clock, AlertTriangle } from 'lucide-react';
+import {
+    Play,
+    Send,
+    Loader2,
+    Database,
+    CheckCircle2,
+    XCircle,
+    Clock,
+    AlertTriangle,
+    GripHorizontal,
+} from 'lucide-react';
 import toast from 'react-hot-toast';
 import clsx from 'clsx';
 
@@ -19,6 +29,37 @@ const Problem = () => {
     const [submitting, setSubmitting] = useState(false);
     const [selectedDbId, setSelectedDbId] = useState(null);
     const [submissionStatus, setSubmissionStatus] = useState(null);
+    const [outputHeight, setOutputHeight] = useState(200);
+    const [isResizing, setIsResizing] = useState(false);
+
+    // Handle resize for output panel
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            if (!isResizing) return;
+            const container = document.getElementById('right-pane');
+            if (container) {
+                const containerRect = container.getBoundingClientRect();
+                const newHeight = containerRect.bottom - e.clientY;
+                // Min 80px, max là chiều cao container trừ đi toolbar (50px) + editor min (240px) + gaps (32px)
+                const maxHeight = containerRect.height - 322;
+                setOutputHeight(Math.max(80, Math.min(newHeight, maxHeight)));
+            }
+        };
+
+        const handleMouseUp = () => {
+            setIsResizing(false);
+        };
+
+        if (isResizing) {
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+        }
+
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+        };
+    }, [isResizing]);
 
     useEffect(() => {
         const fetchQuestion = async () => {
@@ -143,7 +184,7 @@ const Problem = () => {
     if (!question) return <div className="p-8 text-center">Question not found</div>;
 
     return (
-        <div className="flex h-[calc(100vh-100px)] gap-4 overflow-hidden">
+        <div className="flex h-[calc(100vh-135px)] gap-4 overflow-hidden py-10">
             {/* Left Pane: Description */}
             <div className="w-1/2 flex flex-col glass-panel rounded-xl overflow-hidden">
                 <div className="p-6 border-b border-white/10 bg-white/5">
@@ -178,7 +219,7 @@ const Problem = () => {
             </div>
 
             {/* Right Pane: Editor & Results */}
-            <div className="w-1/2 flex flex-col gap-4">
+            <div id="right-pane" className="w-1/2 flex flex-col gap-4">
                 {/* Toolbar */}
                 <div className="flex items-center justify-between glass-panel p-2 rounded-xl">
                     <div className="flex items-center gap-2 px-2">
@@ -221,13 +262,23 @@ const Problem = () => {
                 </div>
 
                 {/* Editor */}
-                <div className="flex-1 min-h-[300px] glass-panel rounded-xl overflow-hidden border border-white/10">
+                <div className="flex-1 min-h-[240px] glass-panel rounded-xl overflow-hidden border border-white/10">
                     <SQLEditor value={sql} onChange={setSql} disabled={executing || submitting} />
                 </div>
 
                 {/* Results / Status */}
-                <div className="h-1/3 glass-panel rounded-xl overflow-hidden flex flex-col">
-                    <div className="px-4 py-2 border-b border-white/10 bg-white/5 text-xs font-medium text-text-muted flex justify-between items-center">
+                <div
+                    className="glass-panel rounded-xl overflow-hidden flex flex-col flex-shrink-0"
+                    style={{ height: outputHeight }}
+                >
+                    {/* Resize Handle */}
+                    <div
+                        className="h-2 cursor-ns-resize bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center group"
+                        onMouseDown={() => setIsResizing(true)}
+                    >
+                        <GripHorizontal className="w-4 h-4 text-text-muted opacity-50 group-hover:opacity-100" />
+                    </div>
+                    <div className="px-2 py-1 border-b border-white/10 bg-white/5 text-xs font-medium text-text-muted flex justify-between items-center">
                         <span>Output</span>
                         {submissionStatus && (
                             <span

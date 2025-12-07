@@ -46,7 +46,7 @@ const Layout = () => {
             </header>
 
             {/* Main Content */}
-            <main className="flex-1 container py-8">
+            <main className="flex-1 container py-8 px-8">
                 <Outlet />
             </main>
 
