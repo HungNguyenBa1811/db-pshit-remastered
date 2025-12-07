@@ -90,7 +90,7 @@ const Problem = () => {
                         setSelectedDbId(response.data.questionDetails[0].typeDatabase.id);
                     }
                     setSql(
-                        `-- ${response.data.title}\n-- ID: ${response.data.questionCode}\n\nSELECT * FROM table_name;`,
+                        `SELECT * FROM huzano;`,
                     );
                 } else {
                     toast.error('Failed to load question details');

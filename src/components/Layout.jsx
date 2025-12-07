@@ -1,4 +1,5 @@
 import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import problems from '../data/problems.json';
 import { useAuth } from '../contexts/AuthContext';
 import { LogOut, Code2, User, LayoutDashboard, ArrowLeft, ArrowRight } from 'lucide-react';
@@ -22,6 +23,11 @@ const Layout = () => {
     const prevId = idx > 0 ? problems[idx - 1].id : null;
     const nextId = idx >= 0 && idx < problems.length - 1 ? problems[idx + 1].id : null;
     const currentIndexDisplay = idx >= 0 ? `${idx + 1} / ${problems.length}` : null;
+    const [jumpIndex, setJumpIndex] = useState(idx >= 0 ? idx + 1 : '');
+
+    useEffect(() => {
+        setJumpIndex(idx >= 0 ? idx + 1 : '');
+    }, [idx]);
 
     const handleLogout = () => {
         logout();
@@ -55,6 +61,28 @@ const Layout = () => {
                             </button>
 
                             <div className="text-sm text-text-muted px-2">{currentIndexDisplay}</div>
+
+                            <form
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    const n = Number(jumpIndex);
+                                    if (!isNaN(n) && n >= 1 && n <= problems.length) {
+                                        const pid = problems[n - 1].id;
+                                        navigate(`/problem/${pid}`);
+                                    }
+                                }}
+                                className="flex items-center gap-2"
+                            >
+                                <input
+                                    type="number"
+                                    min={1}
+                                    max={problems.length}
+                                    value={jumpIndex}
+                                    onChange={(e) => setJumpIndex(e.target.value)}
+                                    className="w-16 text-sm text-black bg-white/3 text-text-main px-2 py-1 rounded border border-white/5 focus:outline-none"
+                                    aria-label="Jump to problem number"
+                                />
+                            </form>
 
                             <button
                                 onClick={() => nextId && navigate(`/problem/${nextId}`)}
