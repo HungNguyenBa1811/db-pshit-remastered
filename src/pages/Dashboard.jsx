@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { localProblemsApi } from '../services/problemsData';
 import QuestionCard from '../components/QuestionCard';
 import { Search, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { executorApi } from '../services/api';
 import toast from 'react-hot-toast';
 
 const Dashboard = () => {
@@ -9,24 +10,126 @@ const Dashboard = () => {
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(0);
+    const [filteredTotal, setFilteredTotal] = useState(0);
     const [keyword, setKeyword] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
+    const [statuses, setStatuses] = useState({});
+    const [filter, setFilter] = useState(() => {
+        try {
+            return localStorage.getItem('dashboard_status_filter') || 'ALL';
+        } catch (e) {
+            return 'ALL';
+        }
+    });
+
+    // cache for all problems and statuses to avoid repeated API calls when paging
+    const allCacheRef = useRef({ key: '', data: [] });
+    const statusesCacheRef = useRef({ key: '', map: {} });
 
     const fetchQuestions = async () => {
         try {
             setLoading(true);
-            const params = {
-                page,
-                size: 12,
-            };
-            if (searchTerm) {
-                params.keyword = searchTerm;
+
+            const size = 12;
+
+            // If no filter, use the paginated local search (server-like behavior)
+            if (!filter || filter === 'ALL') {
+                const params = { page, size };
+                if (searchTerm) params.keyword = searchTerm;
+
+                const response = await localProblemsApi.search(params);
+
+                setQuestions(response.data.content);
+                setTotalPages(response.data.totalPages);
+                setFilteredTotal(response.data.totalElements);
+
+                // Fetch statuses for visible items
+                const ids = response.data.content.map((q) => q.id);
+                const token = localStorage.getItem('db_ptit_token');
+                if (token && ids.length > 0) {
+                    try {
+                        const statusResp = await executorApi.checkComplete(ids);
+                        const map = {};
+                        (statusResp.data || []).forEach((s) => {
+                            map[s.questionId] = s.status;
+                        });
+                        setStatuses(map);
+                    } catch (err) {
+                        setStatuses({});
+                    }
+                } else {
+                    setStatuses({});
+                }
+
+                return;
             }
 
-            const response = await localProblemsApi.search(params);
+            // When a status filter is active, fetch all problems and compute pagination client-side
+            const cacheKey = searchTerm || '__all__';
+            let all = [];
+            if (allCacheRef.current.key === cacheKey && Array.isArray(allCacheRef.current.data)) {
+                all = allCacheRef.current.data;
+            } else {
+                const allResp = await localProblemsApi.getAll();
+                all = allResp.data || [];
+                allCacheRef.current.key = cacheKey;
+                allCacheRef.current.data = all;
+            }
+            if (searchTerm) {
+                const lowerKeyword = searchTerm.toLowerCase();
+                all = all.filter(
+                    (p) =>
+                        p.title.toLowerCase().includes(lowerKeyword) ||
+                        p.questionCode.toLowerCase().includes(lowerKeyword),
+                );
+            }
+            const ids = all.map((p) => p.id);
+            const token = localStorage.getItem('db_ptit_token');
+            let map = {};
 
-            setQuestions(response.data.content);
-            setTotalPages(response.data.totalPages);
+            // Use cached statuses if available for this cacheKey+token combo
+            const statusCacheKey = `${cacheKey}::${token || 'no-token'}`;
+            if (statusesCacheRef.current.key === statusCacheKey && statusesCacheRef.current.map) {
+                map = statusesCacheRef.current.map;
+            } else if (token && ids.length > 0) {
+                try {
+                    const statusResp = await executorApi.checkComplete(ids);
+                    (statusResp.data || []).forEach((s) => {
+                        map[s.questionId] = s.status;
+                    });
+                    statusesCacheRef.current.key = statusCacheKey;
+                    statusesCacheRef.current.map = map;
+                } catch (err) {
+                    map = {};
+                    statusesCacheRef.current.key = statusCacheKey;
+                    statusesCacheRef.current.map = map;
+                }
+            } else {
+                // not logged in or no ids -> empty map
+                map = {};
+                statusesCacheRef.current.key = statusCacheKey;
+                statusesCacheRef.current.map = map;
+            }
+
+            setStatuses(map);
+
+            // apply filter (treat missing status as NA)
+            const wanted = filter.toUpperCase();
+            const filtered = all.filter((p) => {
+                const s = (map[p.id] || 'NA').toUpperCase();
+                return s === wanted;
+            });
+
+            const totalElements = filtered.length;
+            const totalPagesCalc = Math.max(1, Math.ceil(totalElements / size));
+            setTotalPages(totalPagesCalc);
+            setFilteredTotal(totalElements);
+
+            const boundedPage = Math.min(Math.max(1, page), totalPagesCalc);
+
+            const start = (boundedPage - 1) * size;
+            const pageContent = filtered.slice(start, start + size);
+            setQuestions(pageContent);
         } catch (error) {
             console.error('Failed to fetch questions:', error);
             toast.error('Failed to load questions');
@@ -37,13 +140,32 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchQuestions();
-    }, [page, searchTerm]);
+    }, [page, searchTerm, filter]);
+
+    // reset to first page when filter or search changes
+    useEffect(() => {
+        setPage(1);
+    }, [filter, searchTerm]);
+
+    // persist filter selection
+    useEffect(() => {
+        try {
+            localStorage.setItem('dashboard_status_filter', filter);
+        } catch (e) {
+            // ignore storage errors
+        }
+    }, [filter]);
+
+    // derived count for UI when filter is active
+    const showingCount = filteredTotal || questions.length;
 
     const handleSearch = (e) => {
         e.preventDefault();
         setSearchTerm(keyword);
         setPage(1);
     };
+
+    const currentPage = Math.min(Math.max(1, page), totalPages || 1);
 
     return (
         <div className="space-y-8">
@@ -60,7 +182,7 @@ const Dashboard = () => {
                         >
                             @thanhtrnnn
                         </a>{' '}
-                        🚀
+                        for the code database 🚀
                     </p>
                 </div>
 
@@ -82,10 +204,33 @@ const Dashboard = () => {
                 </div>
             ) : (
                 <>
-                    {questions.length > 0 ? (
+                    <div className="flex items-center justify-between mb-4 gap-4">
+                        <div className="flex items-center gap-2">
+                            <span className="text-sm text-text-muted mr-2">Filter:</span>
+                            {['ALL', 'AC', 'WA', 'TLE', 'CE', 'NA'].map((opt) => (
+                                <button
+                                    key={opt}
+                                    onClick={() => setFilter(opt)}
+                                    className={`text-sm px-3 py-1 rounded-full transition-colors border ${
+                                        filter === opt
+                                            ? 'bg-primary text-white border-primary'
+                                            : 'bg-white/3 text-text-muted border-transparent hover:bg-white/5'
+                                    }`}
+                                >
+                                    {opt === 'ALL' ? 'All' : opt}
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className="text-sm text-text-muted">
+                            Showing: <span className="font-medium">{showingCount}</span>
+                        </div>
+                    </div>
+
+                    {showingCount > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {questions.map((q) => (
-                                <QuestionCard key={q.id} question={q} />
+                                <QuestionCard key={q.id} question={q} status={statuses[q.id]} />
                             ))}
                         </div>
                     ) : (
@@ -99,19 +244,18 @@ const Dashboard = () => {
                         <div className="flex justify-center items-center gap-4 mt-8">
                             <button
                                 onClick={() => setPage((p) => Math.max(1, p - 1))}
-                                disabled={page === 1}
+                                disabled={currentPage === 1}
                                 className="p-2 rounded-lg hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                             >
                                 <ChevronLeft className="w-5 h-5" />
                             </button>
-
                             <span className="text-sm font-medium text-text-muted">
-                                Page {page} of {totalPages}
+                                Page {currentPage} of {totalPages}
                             </span>
 
                             <button
                                 onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-                                disabled={page === totalPages}
+                                disabled={currentPage === totalPages}
                                 className="p-2 rounded-lg hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                             >
                                 <ChevronRight className="w-5 h-5" />

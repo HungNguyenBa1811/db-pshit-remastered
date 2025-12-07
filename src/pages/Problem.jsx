@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { localProblemsApi } from '../services/problemsData';
-import { executorApi } from '../services/api';
+import { executorApi, questionApi } from '../services/api';
 import SQLEditor from '../components/SQLEditor';
 import ResultTable from '../components/ResultTable';
 import {
@@ -65,20 +65,43 @@ const Problem = () => {
         const fetchQuestion = async () => {
             try {
                 setLoading(true);
-                const response = await localProblemsApi.getDetail(id);
-                setQuestion(response.data);
-                if (response.data.questionDetails?.length > 0) {
-                    setSelectedDbId(response.data.questionDetails[0].typeDatabase.id);
+
+                let response = null;
+
+                // resolve mapping using local data first
+                const all = await localProblemsApi.getAll();
+                const found = (all.data || []).find((p) => p.id === id || p.questionCode === id);
+
+                if (found) {
+                    try {
+                        response = await questionApi.getDetail(found.id);
+                    } catch (err) {
+                        response = await localProblemsApi.getDetail(found.id);
+                    }
+                } else {
+                    try {
+                        response = await localProblemsApi.getDetail(id);
+                    } catch (err) {}
                 }
-                // Initialize SQL template if needed
-                setSql(`-- ${response.data.title}\n-- ID: ${response.data.questionCode}\n\nSELECT * FROM table_name;`);
+
+                if (response && response.data) {
+                    setQuestion(response.data);
+                    if (response.data.questionDetails?.length > 0) {
+                        setSelectedDbId(response.data.questionDetails[0].typeDatabase.id);
+                    }
+                    setSql(
+                        `-- ${response.data.title}\n-- ID: ${response.data.questionCode}\n\nSELECT * FROM table_name;`,
+                    );
+                } else {
+                    toast.error('Failed to load question details');
+                }
             } catch (error) {
-                console.error('Failed to fetch question:', error);
                 toast.error('Failed to load question details');
             } finally {
                 setLoading(false);
             }
         };
+
         fetchQuestion();
     }, [id]);
 
@@ -91,9 +114,10 @@ const Problem = () => {
         setSubmissionStatus(null);
 
         try {
+            const payloadSql = sql.replace(/\r\n/g, '\n');
             const response = await executorApi.dryRun({
                 questionId: question.id,
-                sql: sql,
+                sql: payloadSql,
                 typeDatabaseId: selectedDbId,
             });
 
@@ -159,9 +183,10 @@ const Problem = () => {
         setError(null);
 
         try {
+            const payloadSql = sql.replace(/\r\n/g, '\n');
             await executorApi.submit({
                 questionId: question.id,
-                sql: sql,
+                sql: payloadSql,
                 typeDatabaseId: selectedDbId,
             });
             // Submission sent successfully, wait 3 seconds then check result
@@ -273,7 +298,7 @@ const Problem = () => {
                 >
                     {/* Resize Handle */}
                     <div
-                        className="h-2 cursor-ns-resize bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center group"
+                        className="h-2 cursor-ns-resize bg-white/10 hover:bg-white/10 transition-colors flex items-center justify-center group"
                         onMouseDown={() => setIsResizing(true)}
                     >
                         <GripHorizontal className="w-4 h-4 text-text-muted opacity-50 group-hover:opacity-100" />

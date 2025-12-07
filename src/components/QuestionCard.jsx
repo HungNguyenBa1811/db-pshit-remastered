@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Database, CheckCircle2, BarChart3, Users } from 'lucide-react';
+import { Database, CheckCircle2, BarChart3, Users, XCircle, Clock, MinusCircle } from 'lucide-react';
 import clsx from 'clsx';
 
-const QuestionCard = ({ question }) => {
+const QuestionCard = ({ question, status }) => {
     const getLevelColor = (level) => {
         switch (level?.toUpperCase()) {
             case 'EASY':
@@ -30,9 +30,54 @@ const QuestionCard = ({ question }) => {
                 >
                     {question.level}
                 </span>
-                <span className="text-xs font-mono text-text-muted bg-white/5 px-2 py-1 rounded">
-                    {question.questionCode}
-                </span>
+                <div className="flex items-center gap-2">
+                    {status === 'AC' ? (
+                        <span
+                            className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold text-success"
+                            title="Accepted"
+                        >
+                            <CheckCircle2 className="w-4 h-4" />
+                            AC
+                        </span>
+                    ) : status === 'WA' ? (
+                        <span
+                            className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold text-error"
+                            title="Wrong Answer"
+                        >
+                            <XCircle className="w-4 h-4" />
+                            WA
+                        </span>
+                    ) : status === 'TLE' ? (
+                        <span
+                            className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold text-error"
+                            title="Time Limit Exceeded"
+                        >
+                            <XCircle className="w-4 h-4" />
+                            TLE
+                        </span>
+                    ) : status === 'CE' ? (
+                        <span
+                            className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold text-error"
+                            title="Compile Error"
+                        >
+                            <XCircle className="w-4 h-4" />
+                            CE
+                        </span>
+                    ) : (
+                        // Default: Not Attempted (2-letter code NA) with icon
+                        <span
+                            className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold text-text-muted"
+                            title="Not attempted"
+                        >
+                            <MinusCircle className="w-4 h-4" />
+                            NA
+                        </span>
+                    )}
+
+                    <span className="text-xs font-mono text-text-muted bg-white/5 px-2 py-1 rounded">
+                        {question.questionCode}
+                    </span>
+                </div>
             </div>
 
             <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">

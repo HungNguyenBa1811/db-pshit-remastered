@@ -1,16 +1,34 @@
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
+import problems from '../data/problems.json';
 import { useAuth } from '../contexts/AuthContext';
-import { LogOut, Code2, User, LayoutDashboard } from 'lucide-react';
+import { LogOut, Code2, User, LayoutDashboard, ArrowLeft, ArrowRight } from 'lucide-react';
 import clsx from 'clsx';
 
 const Layout = () => {
     const { user, logout } = useAuth();
     const navigate = useNavigate();
 
+    const location = useLocation();
+    const match = location.pathname.match(/\/problem\/([^/]+)/);
+    const currentId = match ? match[1] : null;
+    let idx = -1;
+    if (currentId) {
+        idx = problems.findIndex((p) => p.id === currentId);
+        if (idx === -1) {
+            const decoded = decodeURIComponent(currentId);
+            idx = problems.findIndex((p) => p.questionCode === currentId || p.questionCode === decoded);
+        }
+    }
+    const prevId = idx > 0 ? problems[idx - 1].id : null;
+    const nextId = idx >= 0 && idx < problems.length - 1 ? problems[idx + 1].id : null;
+    const currentIndexDisplay = idx >= 0 ? `${idx + 1} / ${problems.length}` : null;
+
     const handleLogout = () => {
         logout();
         navigate('/login');
     };
+
+    // console.log(user)
 
     return (
         <div className="min-h-screen flex flex-col">
@@ -24,12 +42,39 @@ const Layout = () => {
                         <span className="text-gradient">DB PTIT Fake</span>
                     </Link>
 
+                    {/* Prev / Next navigation (shows only on problem pages) */}
+                    {match && (
+                        <div className="hidden md:flex items-center gap-2 ml-4">
+                            <button
+                                onClick={() => prevId && navigate(`/problem/${prevId}`)}
+                                disabled={!prevId}
+                                className="p-2 rounded-lg hover:bg-white/5 disabled:opacity-50"
+                                title="Previous problem"
+                            >
+                                <ArrowLeft className="w-5 h-5 text-text-muted" />
+                            </button>
+
+                            <div className="text-sm text-text-muted px-2">{currentIndexDisplay}</div>
+
+                            <button
+                                onClick={() => nextId && navigate(`/problem/${nextId}`)}
+                                disabled={!nextId}
+                                className="p-2 rounded-lg hover:bg-white/5 disabled:opacity-50"
+                                title="Next problem"
+                            >
+                                <ArrowRight className="w-5 h-5 text-text-muted" />
+                            </button>
+                        </div>
+                    )}
+
                     <div className="flex items-center gap-4">
                         {user && (
                             <>
                                 <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/5">
                                     <User className="w-4 h-4 text-text-muted" />
-                                    <span className="text-sm font-medium text-text-main">{user.sub || 'Student'}</span>
+                                    <span className="text-sm font-medium text-text-main">
+                                        {user.firstName + " " + user.lastName || 'Student'}
+                                    </span>
                                 </div>
 
                                 <button
