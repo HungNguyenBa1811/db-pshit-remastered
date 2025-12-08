@@ -1,19 +1,34 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import MonacoEditor from '@monaco-editor/react';
 
 const SQLEditor = ({ value, onChange, disabled }) => {
     const monacoRef = useRef(null);
+    const [suggestionsEnabled, setSuggestionsEnabled] = useState(() => {
+        try {
+            const raw = localStorage.getItem('sql_editor_suggestions');
+            return raw === 'true';
+        } catch (e) {
+            return false;
+        }
+    });
 
     useEffect(() => {
         // In case consumers update value externally, Monaco will reflect via prop
     }, [value]);
 
-    const handleMount = (editor, monaco) => {
-        monacoRef.current = { editor, monaco };
-        // sensible defaults
-        editor.updateOptions({ tabSize: 4, insertSpaces: true });
+    const registerProvider = (monaco) => {
         try {
+            // dispose existing provider if any to avoid duplicate registrations
+            if (
+                monacoRef.current &&
+                monacoRef.current.provider &&
+                typeof monacoRef.current.provider.dispose === 'function'
+            ) {
+                monacoRef.current.provider.dispose();
+                monacoRef.current.provider = null;
+            }
+
             const keywords = [
                 // core SQL
                 'SELECT',
@@ -168,6 +183,17 @@ const SQLEditor = ({ value, onChange, disabled }) => {
                 'TO_DATE',
             ];
 
+            // deduplicate keywords (avoid duplicates showing up on re-register)
+            const seen = new Set();
+            const uniqueKeywords = [];
+            for (const k of keywords) {
+                const u = String(k).toUpperCase();
+                if (!seen.has(u)) {
+                    seen.add(u);
+                    uniqueKeywords.push(k);
+                }
+            }
+
             const provider = monaco.languages.registerCompletionItemProvider('sql', {
                 triggerCharacters: [' ', '.', '\n', '\t', '('],
                 provideCompletionItems: (model, position) => {
@@ -179,7 +205,7 @@ const SQLEditor = ({ value, onChange, disabled }) => {
                         endColumn: word.endColumn,
                     };
 
-                    const suggestions = keywords.map((kw) => ({
+                    const suggestions = uniqueKeywords.map((kw) => ({
                         label: kw,
                         kind: monaco.languages.CompletionItemKind.Keyword,
                         insertText: kw,
@@ -193,9 +219,14 @@ const SQLEditor = ({ value, onChange, disabled }) => {
             monacoRef.current.provider = provider;
         } catch (err) {
             // ignore completion registration failures
-            // (monaco may not be ready in some environments)
-            // console.warn('Monaco completion setup failed', err);
         }
+    };
+
+    const handleMount = (editor, monaco) => {
+        monacoRef.current = { editor, monaco, provider: monacoRef.current?.provider || null };
+        // sensible defaults
+        editor.updateOptions({ tabSize: 4, insertSpaces: true });
+        if (suggestionsEnabled) registerProvider(monaco);
     };
 
     const handleUnmount = () => {
@@ -211,10 +242,46 @@ const SQLEditor = ({ value, onChange, disabled }) => {
         }
     };
 
+    // react to user toggling suggestions after mount
+    useEffect(() => {
+        try {
+            localStorage.setItem('sql_editor_suggestions', suggestionsEnabled ? 'true' : 'false');
+        } catch (e) {
+            // ignore
+        }
+
+        if (!monacoRef.current) return;
+        const { monaco } = monacoRef.current;
+        if (suggestionsEnabled) {
+            registerProvider(monaco);
+        } else {
+            // dispose if present
+            if (monacoRef.current.provider && typeof monacoRef.current.provider.dispose === 'function') {
+                monacoRef.current.provider.dispose();
+                monacoRef.current.provider = null;
+            }
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [suggestionsEnabled]);
+
     return (
         <div className="relative w-full h-full flex flex-col">
             <div className="absolute top-0 left-0 right-0 h-8 bg-transparent border-b border-white/10 flex items-center px-4 text-xs text-text-muted select-none">
-                SQL Editor
+                <div className="flex items-center gap-3 w-full">
+                    <div className="flex-1">SQL Editor</div>
+                    <div className="flex items-center gap-2">
+                        <label className="text-xs text-text-muted">Suggestions</label>
+                        <button
+                            onClick={() => setSuggestionsEnabled((s) => !s)}
+                            className={`px-2 py-0.5 rounded text-xs font-medium transition-colors ${
+                                suggestionsEnabled ? 'bg-primary text-white' : 'bg-white/5 text-text-muted'
+                            }`}
+                            type="button"
+                        >
+                            {suggestionsEnabled ? 'On' : 'Off'}
+                        </button>
+                    </div>
+                </div>
             </div>
             <div
                 className={clsx(
