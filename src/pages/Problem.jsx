@@ -220,7 +220,7 @@ const Problem = () => {
             });
             // Submission sent successfully, wait 3 seconds then check result
             toast.success('Submission queued');
-            setTimeout(() => checkSubmissionResult(question.id), 3000);
+            setTimeout(() => checkSubmissionResult(question.id), 2000);
             // refresh history after submit (short delay)
             setTimeout(() => fetchHistory(question.id), 2500);
         } catch (err) {
