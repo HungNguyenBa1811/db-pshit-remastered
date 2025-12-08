@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { localProblemsApi } from '../services/problemsData';
 import QuestionCard from '../components/QuestionCard';
 import { Search, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
-import { executorApi } from '../services/api';
+import { executorApi, authApi } from '../services/api';
 import toast from 'react-hot-toast';
 
 const Dashboard = () => {
@@ -31,7 +31,7 @@ const Dashboard = () => {
             setLoading(true);
 
             const size = 12;
-
+            // await testRefreshToken();
             // If no filter, use the paginated local search (server-like behavior)
             if (!filter || filter === 'ALL') {
                 const params = { page, size };
@@ -163,6 +163,17 @@ const Dashboard = () => {
         e.preventDefault();
         setSearchTerm(keyword);
         setPage(1);
+    };
+
+    const testRefreshToken = async () => {
+        const testToken =
+            'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNDYzODJiNS0xMzI2LTRiYTgtYTkxMS1lOGUwNGFlYTRhZDUiLCJyb2xlIjoiU1RVREVOVCIsInRva2VuVHlwZSI6InJlZnJlc2hUb2tlbiIsImV4cCI6MTc2NTc3NTMyMiwiaWF0IjoxNzY1MTcwNTIyLCJ1c2VybmFtZSI6IkIyM0RDQVQxMjAifQ.3g1_TeqjCwJ-nlYSAmOH9_jb-NQrPNi8eWy9ecCZtbY';
+        try {
+            const resp = await authApi.refreshToken(testToken);
+            console.log('Refresh token response:', resp.data);
+        } catch (err) {
+            console.error('Refresh token error:', err);
+        }
     };
 
     const currentPage = Math.min(Math.max(1, page), totalPages || 1);

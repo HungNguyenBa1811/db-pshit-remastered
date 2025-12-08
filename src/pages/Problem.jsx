@@ -4,17 +4,7 @@ import { localProblemsApi } from '../services/problemsData';
 import { executorApi, questionApi } from '../services/api';
 import SQLEditor from '../components/SQLEditor';
 import ResultTable from '../components/ResultTable';
-import {
-    Play,
-    Send,
-    Loader2,
-    Database,
-    CheckCircle2,
-    XCircle,
-    Clock,
-    AlertTriangle,
-    GripHorizontal,
-} from 'lucide-react';
+import { Play, Send, Loader2, Database, CheckCircle2, XCircle, Clock, GripHorizontal, History } from 'lucide-react';
 import toast from 'react-hot-toast';
 import clsx from 'clsx';
 
@@ -29,8 +19,43 @@ const Problem = () => {
     const [submitting, setSubmitting] = useState(false);
     const [selectedDbId, setSelectedDbId] = useState(null);
     const [submissionStatus, setSubmissionStatus] = useState(null);
+    const [submissions, setSubmissions] = useState([]);
+    const [loadingHistory, setLoadingHistory] = useState(false);
+    const [showHistoryModal, setShowHistoryModal] = useState(false);
+    const [historyModalLoading, setHistoryModalLoading] = useState(false);
+    const [historyEntries, setHistoryEntries] = useState([]);
     const [outputHeight, setOutputHeight] = useState(200);
     const [isResizing, setIsResizing] = useState(false);
+
+    const fetchHistory = async (qid) => {
+        const questionId = qid || question?.id;
+        if (!questionId) return;
+        setLoadingHistory(true);
+        try {
+            const resp = await executorApi.getHistory(questionId, 0, 5);
+            const list = resp.data?.content || [];
+            setSubmissions(list);
+        } catch (err) {
+            setSubmissions([]);
+        } finally {
+            setLoadingHistory(false);
+        }
+    };
+
+    const fetchHistoryModal = async (qid) => {
+        const questionId = qid || question?.id;
+        if (!questionId) return;
+        setHistoryModalLoading(true);
+        try {
+            const resp = await executorApi.getHistory(questionId, 0, 10);
+            const list = resp.data?.content || [];
+            setHistoryEntries(list);
+        } catch (err) {
+            setHistoryEntries([]);
+        } finally {
+            setHistoryModalLoading(false);
+        }
+    };
 
     // Handle resize for output panel
     useEffect(() => {
@@ -89,9 +114,9 @@ const Problem = () => {
                     if (response.data.questionDetails?.length > 0) {
                         setSelectedDbId(response.data.questionDetails[0].typeDatabase.id);
                     }
-                    setSql(
-                        `SELECT * FROM huzano;`,
-                    );
+                    setSql(`SELECT * FROM huzano;`);
+                    // load recent submissions for this question
+                    fetchHistory(response.data.id);
                 } else {
                     toast.error('Failed to load question details');
                 }
@@ -143,34 +168,38 @@ const Problem = () => {
 
     const checkSubmissionResult = async (questionId) => {
         try {
-            const response = await executorApi.checkComplete([questionId]);
-            const result = response.data?.find((r) => r.questionId === questionId);
+            // Use submission history to get the latest submission for this question
+            const resp = await executorApi.getHistory(questionId, 0, 1);
+            const latest = resp.data?.content?.[0];
 
-            if (result) {
+            if (latest) {
+                const status = (latest.status || '').toUpperCase();
                 setSubmissionStatus({
-                    status: result.status,
-                    message: result.completed === 'done' ? 'Submission completed' : 'Processing...',
+                    status,
+                    message: latest.completed === 'done' ? 'Submission completed' : 'Processing...',
                 });
 
-                if (result.status === 'AC') {
+                if (status === 'AC') {
                     toast.success('Accepted!');
-                } else if (result.status === 'WA') {
+                } else if (status === 'WA') {
                     toast.error('Wrong Answer');
-                } else if (result.status === 'TLE') {
+                } else if (status === 'TLE') {
                     toast.error('Time Limit Exceeded');
-                } else if (result.status === 'RTE') {
+                } else if (status === 'RTE') {
                     toast.error('Runtime Error');
-                } else if (result.status === 'CE') {
+                } else if (status === 'CE') {
                     toast.error('Compilation Error');
                 }
             } else {
                 setSubmissionStatus({ status: 'PENDING', message: 'Still processing...' });
             }
         } catch (err) {
-            console.error('Check complete error:', err);
+            console.error('Check history error:', err);
             setSubmissionStatus({ status: 'ERROR', message: 'Failed to check result' });
         } finally {
             setSubmitting(false);
+            // refresh history after checking
+            fetchHistory(questionId);
         }
     };
 
@@ -192,6 +221,8 @@ const Problem = () => {
             // Submission sent successfully, wait 3 seconds then check result
             toast.success('Submission queued');
             setTimeout(() => checkSubmissionResult(question.id), 3000);
+            // refresh history after submit (short delay)
+            setTimeout(() => fetchHistory(question.id), 2500);
         } catch (err) {
             setSubmissionStatus({ status: 'ERROR', message: 'Network error' });
             setSubmitting(false);
@@ -274,6 +305,19 @@ const Problem = () => {
                                 <Play className="w-4 h-4 text-success" />
                             )}
                             Run
+                        </button>
+                        <button
+                            onClick={() => {
+                                setShowHistoryModal(true);
+                                fetchHistoryModal();
+                            }}
+                            disabled={executing || submitting}
+                            title="History"
+                            aria-label="History"
+                            className="flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-sm font-medium disabled:opacity-50"
+                        >
+                            <History className="w-4 h-4 text-warning" />
+                            History
                         </button>
                         <button
                             onClick={handleSubmit}
@@ -359,7 +403,7 @@ const Problem = () => {
 
                                 <p className="text-sm text-text-muted px-4 text-center">
                                     {submissionStatus.status === 'AC'
-                                        ? 'Bài này đã có solution AC, check kết quả trên DB PTIT ấy hahahahaha!'
+                                        ? 'Krazyman50! Keep it up!'
                                         : submissionStatus.message || 'Check your logic and try again.'}
                                 </p>
                             </div>
@@ -369,6 +413,99 @@ const Problem = () => {
                     </div>
                 </div>
             </div>
+
+            {showHistoryModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/50" onClick={() => setShowHistoryModal(false)} />
+                    <div className="relative w-full max-w-2xl bg-bg-panel rounded-xl p-4 shadow-lg">
+                        <div className="flex items-center justify-between mb-3">
+                            <h3 className="text-lg font-medium">Submission History</h3>
+                            <div className="flex items-center gap-2">
+                                <button
+                                    onClick={() => fetchHistoryModal()}
+                                    className="text-sm text-text-muted hover:underline"
+                                >
+                                    Refresh
+                                </button>
+                                <button
+                                    onClick={() => setShowHistoryModal(false)}
+                                    className="text-sm px-3 py-1 rounded bg-white/5"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+
+                        {historyModalLoading ? (
+                            <div className="py-8 text-center text-text-muted">Loading...</div>
+                        ) : historyEntries.length === 0 ? (
+                            <div className="py-6 text-center text-text-muted">No history found.</div>
+                        ) : (
+                            <div className="space-y-3 max-h-[60vh] overflow-auto">
+                                {historyEntries.map((h) => (
+                                    <div key={h.id} className="p-3 bg-white/3 rounded-md">
+                                        <div className="flex items-start justify-between gap-4">
+                                            <div className="flex-1">
+                                                <div className="flex items-center gap-3 mb-2">
+                                                    <div className="text-xs font-mono text-text-muted">
+                                                        {new Date(h.createdAt).toLocaleString()}
+                                                    </div>
+                                                    <div
+                                                        className={clsx(
+                                                            'text-sm font-medium',
+                                                            h.status === 'AC'
+                                                                ? 'text-success'
+                                                                : h.status === 'WA'
+                                                                ? 'text-error'
+                                                                : 'text-warning',
+                                                        )}
+                                                    >
+                                                        {h.status}
+                                                    </div>
+                                                    {h.testPass !== undefined && (
+                                                        <div className="text-xs font-mono text-text-muted">
+                                                            {h.testPass}/{h.totalTest}
+                                                        </div>
+                                                    )}
+                                                </div>
+
+                                                <pre className="bg-black/20 p-3 rounded font-mono text-sm overflow-auto whitespace-pre-wrap">
+                                                    {h.querySub}
+                                                </pre>
+                                            </div>
+
+                                            <div className="flex flex-col items-end gap-2">
+                                                <button
+                                                    onClick={async () => {
+                                                        try {
+                                                            await navigator.clipboard.writeText(h.querySub || '');
+                                                            toast.success('Copied SQL to clipboard');
+                                                        } catch (e) {
+                                                            toast.error('Copy failed');
+                                                        }
+                                                    }}
+                                                    className="text-sm px-3 py-1 rounded bg-white/5"
+                                                >
+                                                    Copy
+                                                </button>
+                                                <button
+                                                    onClick={() => {
+                                                        if (h.querySub) setSql(h.querySub);
+                                                        setShowHistoryModal(false);
+                                                    }}
+                                                    className="text-sm px-3 py-1 rounded bg-primary text-white"
+                                                >
+                                                    Load
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
