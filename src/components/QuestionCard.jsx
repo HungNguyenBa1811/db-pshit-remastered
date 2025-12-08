@@ -77,6 +77,14 @@ const QuestionCard = ({ question, status }) => {
                     <span className="text-xs font-mono text-text-muted bg-white/5 px-2 py-1 rounded">
                         {question.questionCode}
                     </span>
+                    {question.type && (
+                        <span
+                            className="text-xs font-mono text-text-muted bg-white/3 px-2 py-1 rounded ml-1"
+                            title={`Type: ${question.type}`}
+                        >
+                            {String(question.type).toUpperCase()}
+                        </span>
+                    )}
                 </div>
             </div>
 

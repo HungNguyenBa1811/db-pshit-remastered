@@ -21,6 +21,13 @@ const Dashboard = () => {
             return 'ALL';
         }
     });
+    const [typeFilter, setTypeFilter] = useState(() => {
+        try {
+            return localStorage.getItem('dashboard_type_filter') || 'ALL';
+        } catch (e) {
+            return 'ALL';
+        }
+    });
 
     // cache for all problems and statuses to avoid repeated API calls when paging
     const allCacheRef = useRef({ key: '', data: [] });
@@ -31,15 +38,61 @@ const Dashboard = () => {
             setLoading(true);
 
             const size = 12;
-            // await testRefreshToken();
-            // If no filter, use the paginated local search (server-like behavior)
+            // If no status filter, use paginated local search unless a type filter is active
             if (!filter || filter === 'ALL') {
+                // If typeFilter is active, fetch all and paginate client-side to allow accurate counts
+                if (typeFilter && typeFilter !== 'ALL') {
+                    const allResp = await localProblemsApi.getAll();
+                    let all = allResp.data || [];
+                    if (searchTerm) {
+                        const lowerKeyword = searchTerm.toLowerCase();
+                        all = all.filter(
+                            (p) =>
+                                p.title.toLowerCase().includes(lowerKeyword) ||
+                                p.questionCode.toLowerCase().includes(lowerKeyword),
+                        );
+                    }
+                    const want = String(typeFilter).toUpperCase();
+                    all = all.filter((p) => String(p.type || '').toUpperCase() === want);
+
+                    const totalElements = all.length;
+                    const totalPagesCalc = Math.max(1, Math.ceil(totalElements / size));
+                    setTotalPages(totalPagesCalc);
+                    setFilteredTotal(totalElements);
+
+                    const boundedPage = Math.min(Math.max(1, page), totalPagesCalc);
+                    const start = (boundedPage - 1) * size;
+                    const pageContent = all.slice(start, start + size);
+                    setQuestions(pageContent);
+
+                    // Fetch statuses for visible items
+                    const ids = pageContent.map((q) => q.id);
+                    const token = localStorage.getItem('db_ptit_token');
+                    if (token && ids.length > 0) {
+                        try {
+                            const statusResp = await executorApi.checkComplete(ids);
+                            const map = {};
+                            (statusResp.data || []).forEach((s) => {
+                                map[s.questionId] = s.status;
+                            });
+                            setStatuses(map);
+                        } catch (err) {
+                            setStatuses({});
+                        }
+                    } else {
+                        setStatuses({});
+                    }
+
+                    return;
+                }
+
                 const params = { page, size };
                 if (searchTerm) params.keyword = searchTerm;
 
                 const response = await localProblemsApi.search(params);
 
-                setQuestions(response.data.content);
+                let pageContent = response.data.content;
+                setQuestions(pageContent);
                 setTotalPages(response.data.totalPages);
                 setFilteredTotal(response.data.totalElements);
 
@@ -82,6 +135,11 @@ const Dashboard = () => {
                         p.title.toLowerCase().includes(lowerKeyword) ||
                         p.questionCode.toLowerCase().includes(lowerKeyword),
                 );
+            }
+            // apply type filter before status filtering/pagination
+            if (typeFilter && typeFilter !== 'ALL') {
+                const want = String(typeFilter).toUpperCase();
+                all = all.filter((p) => String(p.type || '').toUpperCase() === want);
             }
             const ids = all.map((p) => p.id);
             const token = localStorage.getItem('db_ptit_token');
@@ -140,12 +198,12 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchQuestions();
-    }, [page, searchTerm, filter]);
+    }, [page, searchTerm, filter, typeFilter]);
 
     // reset to first page when filter or search changes
     useEffect(() => {
         setPage(1);
-    }, [filter, searchTerm]);
+    }, [filter, searchTerm, typeFilter]);
 
     // persist filter selection
     useEffect(() => {
@@ -155,6 +213,15 @@ const Dashboard = () => {
             // ignore storage errors
         }
     }, [filter]);
+
+    // persist type filter selection
+    useEffect(() => {
+        try {
+            localStorage.setItem('dashboard_type_filter', typeFilter);
+        } catch (e) {
+            // ignore
+        }
+    }, [typeFilter]);
 
     // derived count for UI when filter is active
     const showingCount = filteredTotal || questions.length;
@@ -216,21 +283,40 @@ const Dashboard = () => {
             ) : (
                 <>
                     <div className="flex items-center justify-between mb-4 gap-4">
-                        <div className="flex items-center gap-2">
-                            <span className="text-sm text-text-muted mr-2">Filter:</span>
-                            {['ALL', 'AC', 'WA', 'TLE', 'CE', 'NA'].map((opt) => (
-                                <button
-                                    key={opt}
-                                    onClick={() => setFilter(opt)}
-                                    className={`text-sm px-3 py-1 rounded-full transition-colors border ${
-                                        filter === opt
-                                            ? 'bg-primary text-white border-primary'
-                                            : 'bg-white/3 text-text-muted border-transparent hover:bg-white/5'
-                                    }`}
-                                >
-                                    {opt === 'ALL' ? 'All' : opt}
-                                </button>
-                            ))}
+                        <div className="flex items-center gap-20">
+                            <div className="flex items-center gap-2">
+                                <span className="text-sm text-text-muted mr-2">Filter:</span>
+                                {['ALL', 'AC', 'WA', 'TLE', 'CE', 'NA'].map((opt) => (
+                                    <button
+                                        key={opt}
+                                        onClick={() => setFilter(opt)}
+                                        className={`text-sm px-3 py-1 rounded-full transition-colors border ${
+                                            filter === opt
+                                                ? 'bg-primary text-white border-primary'
+                                                : 'bg-white/3 text-text-muted border-transparent hover:bg-white/5'
+                                        }`}
+                                    >
+                                        {opt === 'ALL' ? 'All' : opt}
+                                    </button>
+                                ))}
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                                <span className="text-sm text-text-muted mr-2">Type:</span>
+                                {['ALL', 'SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'ALTER', 'DROP'].map((t) => (
+                                    <button
+                                        key={t}
+                                        onClick={() => setTypeFilter(t)}
+                                        className={`text-sm px-2 py-1 rounded-full transition-colors border ${
+                                            typeFilter === t
+                                                ? 'bg-white text-bg-panel border-white/10' // subtle active
+                                                : 'bg-white/3 text-text-muted border-transparent hover:bg-white/5'
+                                        }`}
+                                    >
+                                        {t === 'ALL' ? 'All' : t}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="text-sm text-text-muted">
