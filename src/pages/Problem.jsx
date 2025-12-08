@@ -168,7 +168,6 @@ const Problem = () => {
 
     const checkSubmissionResult = async (questionId) => {
         try {
-            // Use submission history to get the latest submission for this question
             const resp = await executorApi.getHistory(questionId, 0, 1);
             const latest = resp.data?.content?.[0];
 
@@ -218,11 +217,10 @@ const Problem = () => {
                 sql: payloadSql,
                 typeDatabaseId: selectedDbId,
             });
-            // Submission sent successfully, wait 3 seconds then check result
             toast.success('Submission queued');
-            setTimeout(() => checkSubmissionResult(question.id), 2000);
+            setTimeout(() => checkSubmissionResult(question.id), 1000);
             // refresh history after submit (short delay)
-            setTimeout(() => fetchHistory(question.id), 2500);
+            setTimeout(() => fetchHistory(question.id), 2000);
         } catch (err) {
             setSubmissionStatus({ status: 'ERROR', message: 'Network error' });
             setSubmitting(false);
