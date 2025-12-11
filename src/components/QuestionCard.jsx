@@ -85,6 +85,14 @@ const QuestionCard = ({ question, status }) => {
                             {String(question.type).toUpperCase()}
                         </span>
                     )}
+                    {question.customSort && (
+                        <span
+                            className="text-xs font-mono text-text-muted bg-white/3 px-2 py-1 rounded ml-1"
+                            title={`Category: ${question.customSort}`}
+                        >
+                            {String(question.customSort)}
+                        </span>
+                    )}
                 </div>
             </div>
 

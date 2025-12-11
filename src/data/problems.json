@@ -23,7 +23,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "a7a4b21f-ceac-4389-87db-e98b5f782c9a",
@@ -49,7 +50,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "93588896-cc1b-4dd4-8894-ff0dc19fd0dc",
@@ -75,7 +77,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "5a4a4c45-8e4f-41d0-834b-64a295248af2",
@@ -101,7 +104,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "96bcc914-ca04-457b-a0d2-c33a20633d05",
@@ -128,7 +132,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "76f0a73d-f6ad-47c2-80a3-7f069df42856",
@@ -155,7 +160,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "aa508f18-9e9c-4d48-8e9b-ac9f768b770d",
@@ -181,7 +187,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "5eb929f2-1c63-4edf-8659-5b102e0e847c",
@@ -208,7 +215,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "242b82d1-87fc-48a1-b4af-f3fd8f6d6d3b",
@@ -234,7 +242,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "c3b40e6d-2d9d-4e74-acd1-4044f56fbbab",
@@ -261,7 +270,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "d11eb0f8-9a15-4d70-88b2-07d6ac680088",
@@ -287,7 +297,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "1f95589f-8a16-4c4d-91ff-22176ff7dbaf",
@@ -313,7 +324,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "89cc9f67-e7d9-4106-8627-2650ef9ce47a",
@@ -339,7 +351,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "4374784f-0906-44e1-9575-7f5d725ae33e",
@@ -365,7 +378,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "4f9b616f-639b-4158-bf16-20e32fdaea29",
@@ -392,7 +406,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "bc9d38d2-7d25-44d8-b97c-431586ae3d73",
@@ -419,7 +434,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "3b6bcdd8-ceee-469c-bbc1-bba380a8490b",
@@ -446,7 +462,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "d13ff2f2-2b58-4586-81ab-e6b067269690",
@@ -473,7 +490,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "76c99d50-b214-4b45-8942-478918fe58ae",
@@ -499,7 +517,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "6a6e4761-f8d1-4f37-a93f-29b71fa42734",
@@ -525,7 +544,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "7f89b2e4-04e2-4f01-b235-153ce0f6b941",
@@ -562,7 +582,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "a88ab707-42a4-4bc4-a1f3-a4d6a01dbc83",
@@ -589,7 +610,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "bfc25a96-8419-4e56-b183-8c2a7657af59",
@@ -615,7 +637,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "8f2eef00-8ad4-4832-a590-cedb3423a5f7",
@@ -642,7 +665,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "4cb2d27b-1f6b-4903-8ff2-fb459aed9f39",
@@ -678,7 +702,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "b4e1a6cb-3688-44b6-8e5c-fa5c77beeb0f",
@@ -716,7 +741,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "d3305b57-7e32-4c4b-b1a3-8ed3c8971b88",
@@ -743,7 +769,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "95d6e7dc-c8bb-4946-a657-82c61135f4c7",
@@ -781,7 +808,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "2dd4321d-b175-4f95-9f4b-e620fb2aa5b8",
@@ -819,7 +847,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "937f7ee9-c25f-4c9e-a568-2c9c93d71cff",
@@ -857,7 +886,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "f9f1b77b-91fb-47d3-9e00-324b802f4d89",
@@ -895,7 +925,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "0113b463-c4cc-4bce-9981-2c3a6aca1779",
@@ -932,7 +963,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "c1be7c4a-7d6d-46eb-b636-55143239fa93",
@@ -970,7 +1002,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "171f76fc-7bee-4a8f-897c-b528677a99c6",
@@ -1008,7 +1041,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "dd1e86b2-e87c-4cb9-b5dc-3d9b9d703bd8",
@@ -1046,7 +1080,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "21869b8f-93fb-401a-82de-fc3f6a47b063",
@@ -1084,7 +1119,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "595dff28-574b-4f4c-81e9-1b0aa490e54d",
@@ -1122,7 +1158,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "cb6ec651-c73e-451b-afa2-e3c057c719e0",
@@ -1158,7 +1195,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "13e19b4c-8913-4103-b533-704f929d648c",
@@ -1194,7 +1232,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "2744bcfd-eb89-47c0-a1c4-697354c4e9aa",
@@ -1230,7 +1269,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "3f790fa4-307c-4de4-bfd9-5fd831c623c3",
@@ -1266,7 +1306,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "d65cca4f-e601-40e9-b395-c2a228cd013c",
@@ -1293,7 +1334,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "37000259-a2b4-48c5-a095-a7ee773a0fd1",
@@ -1320,7 +1362,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "56f45084-3d42-4954-9a3c-083876238aad",
@@ -1347,7 +1390,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "77765591-55fd-4e03-9951-d235d5c06392",
@@ -1374,7 +1418,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "c5950f5e-cf07-4a75-ace1-7d82b243e275",
@@ -1401,7 +1446,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "c3cce420-fe30-4b07-a021-18cd21c324ee",
@@ -1427,7 +1473,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "62a11120-d68f-4517-816a-5d5ed2928f69",
@@ -1453,7 +1500,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "2b0e6542-4cf1-4219-aad4-7db2783d819f",
@@ -1480,7 +1528,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "6b3ec22e-7dde-46e1-83c3-0c44622faefe",
@@ -1514,7 +1563,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "5a948be2-3de7-4985-b94b-06d6db1c4163",
@@ -1548,7 +1598,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "5f64fb51-eea8-46ec-865d-97f3e992575b",
@@ -1582,7 +1633,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "df5664b3-a36a-4078-92f2-e42a9edc4861",
@@ -1616,7 +1668,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "c30da897-442d-445e-9153-3f0818862286",
@@ -1650,7 +1703,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "5f06da94-ad81-4241-80b3-4acad7cc6414",
@@ -1684,7 +1738,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "242cc8a1-17d1-49ef-9153-9b43f097d379",
@@ -1718,7 +1773,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "f4818a0c-4b6e-4b52-804a-d29bab7f0b20",
@@ -1743,7 +1799,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "6381ce26-8c37-4b93-ae00-65825d844122",
@@ -1777,7 +1834,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "13581b1a-583d-465c-a9d2-25a4794930ba",
@@ -1802,7 +1860,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "729091b5-80b5-40d1-8407-77971305c179",
@@ -1836,7 +1895,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "4a20f9bb-fea7-4020-a3fd-2b610b8a7050",
@@ -1861,7 +1921,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "48655e83-8b1e-42f1-ac2f-0ce95e9ddec0",
@@ -1886,7 +1947,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "52588ff2-74f7-4a91-8339-f8ae871631e5",
@@ -1911,7 +1973,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "83396c1c-7bc4-41de-8b41-830216cb38ab",
@@ -1936,7 +1999,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "b10573f0-6714-46e2-9522-6eb4fd063b25",
@@ -1961,7 +2025,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "0b75f4d0-9406-43f0-b31a-06aed53ba2cc",
@@ -1986,7 +2051,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "31dc7b4f-b612-47d7-bfb5-74138611fb0b",
@@ -2011,7 +2077,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "726b03c1-87ae-4fec-8354-058924f590db",
@@ -2036,7 +2103,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "2dce3ac9-4859-47db-b424-3ea9c58af5d6",
@@ -2061,7 +2129,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "a2d41934-2730-4e54-bc40-a3e8cbc7cc85",
@@ -2086,7 +2155,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "11066809-500e-4c09-833e-7fdafaa7544d",
@@ -2111,7 +2181,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "ce9b9e82-8e52-4594-be7d-6b4d47f0238f",
@@ -2136,7 +2207,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "23289965-0b9a-43af-80f0-a469dbd9ad89",
@@ -2161,7 +2233,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "e91d40fc-c564-4a91-9eeb-969aa9beceeb",
@@ -2195,7 +2268,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "d9aa19ed-28a7-4a8d-bacb-09bf6640c272",
@@ -2220,7 +2294,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "c1e44881-57a1-4a24-9955-dc3bc1dce5d6",
@@ -2254,7 +2329,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "a4a6a754-742d-478d-8fd2-5b1098f70137",
@@ -2279,7 +2355,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "381fd68a-456e-4545-aa45-e2d4b322a82e",
@@ -2304,7 +2381,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "49c96c3a-d461-47ae-ad5e-712493b0f9bb",
@@ -2329,7 +2407,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "6f6422d4-1eaa-4c37-b787-13e6668ac932",
@@ -2354,7 +2433,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "33a30a6c-b248-46fb-b8ba-540493ce8290",
@@ -2379,7 +2459,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "360518cb-fb15-47bb-9b98-b76e01a39f40",
@@ -2404,7 +2485,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "00315685-bcaa-444c-8100-2c8c34f88a45",
@@ -2429,7 +2511,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "f7c4953d-554f-4ba8-a99b-d58671879c49",
@@ -2454,7 +2537,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "0302d83c-97ef-494c-aebe-ef1d871f67bf",
@@ -2479,7 +2563,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "16233627-ab8d-4757-9c9a-bec118308510",
@@ -2504,7 +2589,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "f1e0ae26-bb38-42d4-aa3d-356da7974fbf",
@@ -2529,7 +2615,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "57f89e1d-16b0-40a2-a1df-93a076101d6a",
@@ -2554,7 +2641,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "d8fa37e7-3bff-4742-b597-59c52f662023",
@@ -2588,7 +2676,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "fde581a6-ff53-42c1-9c1c-4e7c8a7b16cc",
@@ -2613,7 +2702,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "5098dddf-5b44-4596-9049-b8d650cf8700",
@@ -2638,7 +2728,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "f47a11e6-5d3a-4713-b922-d2dc18739b2c",
@@ -2663,7 +2754,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "3f7e7e5a-bce0-4318-afaa-6e1e614d4099",
@@ -2688,7 +2780,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "0b9d1a61-bf04-4ad7-897e-80a57cdd7317",
@@ -2713,7 +2806,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "e727cf96-1132-4454-bd49-473ad963bbf1",
@@ -2738,7 +2832,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "5beb6f01-e05d-4cfa-8d5d-4ae99b435b70",
@@ -2763,7 +2858,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "ddaf16f1-291e-4732-8a69-229fb41ef47c",
@@ -2788,7 +2884,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "1ec5666a-f395-472a-924e-50f033263350",
@@ -2813,7 +2910,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "dee10ee0-101e-40b5-9fcf-968301e4c612",
@@ -2838,7 +2936,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "635679b4-e66f-4881-866d-3e002c921355",
@@ -2864,7 +2963,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "07aee7e4-d6e3-4959-a9ec-88c558b8e453",
@@ -2889,7 +2989,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "06528653-223b-4b24-a763-9e250e1bc4e5",
@@ -2915,7 +3016,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "6b8671d6-ddd4-4646-9ff5-9442244d1830",
@@ -2941,7 +3043,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "b08967f4-6f48-4d82-a74c-e5cdd24a5e30",
@@ -2967,7 +3070,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "aeff231c-ec89-4772-b525-c075947c970e",
@@ -2992,7 +3096,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "7fb1bb2b-9737-4fbe-9e0b-959f0466e204",
@@ -3018,7 +3123,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "f9c1bee1-db62-4c00-9e16-7b980e510a19",
@@ -3044,7 +3150,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "4c162ba2-c31a-427c-ba75-0d17eff1ddbe",
@@ -3070,7 +3177,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "094d0267-bc9e-4600-8fb9-3a9681413cda",
@@ -3096,7 +3204,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "a917523c-be30-4ccf-866a-876aa419300f",
@@ -3122,7 +3231,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "70e83e8e-d74b-4fbb-a609-d13705191c4a",
@@ -3147,7 +3257,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "73dc2480-43de-4e3f-8c3f-f15b2dc219e1",
@@ -3173,7 +3284,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "a6bc5583-740c-4ae0-9081-e4a5ecf9a661",
@@ -3199,7 +3311,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "e15d3bcb-9603-4bd3-908b-7efd047de9e7",
@@ -3225,7 +3338,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "7dcc0920-b04d-4f81-81a4-ef4b9c2da622",
@@ -3251,7 +3365,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "5fd2bcaf-6210-4470-83db-028af269daf1",
@@ -3277,7 +3392,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "81948f54-b1df-4db0-b2be-07926446326c",
@@ -3302,7 +3418,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "b89a5a0b-04f0-499e-944f-868787110207",
@@ -3327,7 +3444,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "2054b699-6b00-4156-8e84-913541c4b531",
@@ -3353,7 +3471,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "49597b85-4659-4b2a-86e3-10ab779925b4",
@@ -3379,7 +3498,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "0183dde1-207f-42fc-9ece-c489e4aef978",
@@ -3405,7 +3525,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "9858866c-4001-4890-947b-081672ed0c38",
@@ -3430,7 +3551,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "30fed374-970b-4283-bb31-462db088e3d3",
@@ -3456,7 +3578,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "339d0c0c-4052-4b63-a16e-29c5fca4834e",
@@ -3482,7 +3605,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "72858006-ebe2-4c37-82c6-5ade079ffde5",
@@ -3507,7 +3631,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "06889715-b55a-4bee-92b1-1ceceac06f36",
@@ -3533,7 +3658,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "3da45e7a-3443-4681-a841-03dffb1089ac",
@@ -3559,7 +3685,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "b2fdc4ef-7440-4096-8de3-897e04788054",
@@ -3585,7 +3712,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "e33e4329-972f-45fa-a36f-154c842a26c9",
@@ -3610,7 +3738,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "db79ffdf-bbd7-43d5-82a3-6c51969482f2",
@@ -3635,7 +3764,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "7e672ebe-83a5-485f-85e7-dcaa9f05c8cd",
@@ -3660,7 +3790,8 @@
           "name": "Sql Server"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "141e8cf1-358e-4031-b38a-ddcf7e0a3c2b",
@@ -3686,7 +3817,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "0f493f83-ebc2-4ff7-8480-37a30845bc37",
@@ -3712,7 +3844,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "a7cccc4c-2cec-40c2-91a4-a574816ce914",
@@ -3738,7 +3871,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "5b83f1f2-def4-44c2-8602-1d486d0fa980",
@@ -3764,7 +3898,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "353a73af-ab75-4175-a03a-ebb47be24253",
@@ -3790,7 +3925,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "fb4c1824-0c7e-438d-a731-df724d7409f3",
@@ -3815,7 +3951,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "fd6c051e-6de8-4b1d-b391-42c80481d92c",
@@ -3841,7 +3978,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "d2470e4f-a3d8-48a2-94c9-97ff810fc38b",
@@ -3866,7 +4004,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "cf6eff31-0661-47dd-b12d-2ee886661bd5",
@@ -3892,7 +4031,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "e0b70c96-f72b-4995-8627-c0f9255ee35b",
@@ -3917,7 +4057,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "aee38775-fa4c-4739-b5b7-2a492892f095",
@@ -3942,7 +4083,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "cd51d4a3-e1b2-4606-af5f-86bf2a2f91b6",
@@ -3967,7 +4109,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "67f2f5ae-f3cc-4c99-b925-665f0d9c3412",
@@ -3992,7 +4135,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "da9c9da6-64a0-4f1a-be7e-d2725ae5f156",
@@ -4017,7 +4161,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "11deeb7a-4374-4a35-a702-a93da4db95a6",
@@ -4043,7 +4188,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "8c83b0da-1767-4a28-89f2-c55fe137ca11",
@@ -4068,7 +4214,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "90dc58d9-b6f1-4fd9-b2c8-4b1773fdbe40",
@@ -4093,7 +4240,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "ca0bc6f4-b57e-490f-94ed-3170e6d4ef90",
@@ -4118,7 +4266,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "ca4ae588-7bf6-4a6d-af1a-4a052b00ee0d",
@@ -4143,7 +4292,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "51c5bd79-1caf-4c1f-922a-b0694e8f6391",
@@ -4168,7 +4318,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "d16874e8-e6c1-4a4e-8669-8b5aa48944d0",
@@ -4193,7 +4344,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "0017cfaa-8f1e-4821-b2fe-6d8af4c1556b",
@@ -4219,7 +4371,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "f45fb666-1482-4aae-aff7-e83507bfa9a9",
@@ -4244,7 +4397,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "67aac334-1a00-4ce2-a49d-68508c6cffc9",
@@ -4269,7 +4423,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "642b33e8-7fa1-4b73-a267-4e2e3bbe562e",
@@ -4294,7 +4449,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "ed2e750b-9c66-4fce-835f-c7b30847696b",
@@ -4319,7 +4475,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "85ab676c-25ee-46a4-9074-83aa939c517a",
@@ -4345,7 +4502,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "300edc92-c5ae-4fbc-8edf-5b04cef9c52e",
@@ -4371,7 +4529,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "e7eeae3b-4173-45df-80f1-703cc77d5fe9",
@@ -4397,7 +4556,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "8408aa41-2fcb-437d-9ecc-87dc2ab75d02",
@@ -4422,7 +4582,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "7124bf69-7663-4d1e-9aba-0f6f2eee71d4",
@@ -4447,7 +4608,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "89408fef-32c7-43b1-8458-db312f9a4526",
@@ -4472,7 +4634,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "623176ea-89c5-4308-9799-d03b15dfda6d",
@@ -4498,7 +4661,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "87720b73-c075-4bec-91e6-26aa4e9aa552",
@@ -4524,7 +4688,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "450da9df-e164-4fa3-bb69-669ab8888ce4",
@@ -4550,7 +4715,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "17baf7e5-dfed-4c4d-844a-a57f77e23648",
@@ -4576,7 +4742,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "90ab9287-e458-4a87-8402-ae17502f035f",
@@ -4602,7 +4769,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "a1192a50-dee1-4488-b283-7d288ce7d815",
@@ -4628,7 +4796,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "c3a411fe-d4b1-4fde-a5c0-68e5aeb7f9e8",
@@ -4654,7 +4823,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "807a6535-b000-42d1-9a54-05d91a0918eb",
@@ -4680,7 +4850,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "ba7d1188-f3f5-408f-8c58-13bdd123fb2d",
@@ -4706,7 +4877,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "00fbe799-8778-4ad2-8870-a2dab18d9013",
@@ -4732,7 +4904,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "78332c66-dfa5-4d1b-bd74-465cf9694864",
@@ -4758,7 +4931,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "285bb142-c6ab-429b-8117-3ac68fa9bfd1",
@@ -4784,7 +4958,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "bcebdca0-421c-4728-bff4-08eecaa2de1f",
@@ -4810,7 +4985,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "a2d27ce1-49d9-4114-9de3-82d93c71d35b",
@@ -4836,7 +5012,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "49d9e0c5-0592-4a7e-ba5e-faa1837f1408",
@@ -4862,7 +5039,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "ec47050a-579b-4bf5-8b7a-a845c312a555",
@@ -4888,7 +5066,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "8eb5117e-4168-436d-9b71-c5b14b342146",
@@ -4914,7 +5093,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "e4764dda-3fc8-4d71-96d9-53c9694f4317",
@@ -4940,7 +5120,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "915f44cb-70ab-47aa-8cd9-0d619a5d777c",
@@ -4966,7 +5147,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "85e95d19-59fc-4568-aadf-8ca11f6ca8d8",
@@ -4992,7 +5174,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "cabdcc70-e365-4ed9-a6e7-ef757c198414",
@@ -5018,7 +5201,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "bdb80627-5542-4d16-9324-fbdb48ba6d98",
@@ -5044,7 +5228,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "220d1e47-861a-4e73-851f-41690b939e25",
@@ -5070,7 +5255,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "59b1524a-2774-46cc-84a6-0bf63a1eab58",
@@ -5096,7 +5282,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "af84c7d6-2435-4ae5-838e-495c65056888",
@@ -5121,7 +5308,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "41fc806c-210a-42ba-9236-72695da1363a",
@@ -5147,7 +5335,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "fd31ea6f-1ecc-4416-8b33-56d495645d3d",
@@ -5173,7 +5362,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "dbe8e615-121b-4d44-911d-1baddae03dc7",
@@ -5199,7 +5389,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "7e17bf87-c5f4-499b-97b7-9bfd6153e506",
@@ -5225,7 +5416,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "d9f078cf-1293-429d-a358-eeb9330872aa",
@@ -5251,7 +5443,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "78902939-96fa-42cd-a5f6-eef7473ebc3c",
@@ -5277,7 +5470,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "3d5de207-a8f4-482f-a6fe-f73a2a3ef153",
@@ -5302,7 +5496,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "ea97d25b-553e-4282-8dfa-738e0f81b9fe",
@@ -5327,7 +5522,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "9efe994a-0d7e-4e79-b329-45a56dae39c0",
@@ -5352,7 +5548,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "95fb3b78-9171-4c80-a7d1-427c47de4f6d",
@@ -5377,7 +5574,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "7a3ed8ff-2369-4a37-a0bd-1ae127596473",
@@ -5403,7 +5601,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "ec24cac1-0a25-4d74-87cb-5e4be685fa6f",
@@ -5428,7 +5627,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "b7e05ae9-b8d9-464d-aeab-fef403a04e61",
@@ -5453,7 +5653,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "e370e93b-69fd-48e3-9387-ff917747750c",
@@ -5478,7 +5679,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "bb2b42e6-fee1-416e-84cb-80bb8d440fb2",
@@ -5503,7 +5705,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "55d01ff2-5440-4329-8580-21453ffc7956",
@@ -5529,7 +5732,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "9b685517-8b1e-4619-9bb8-381d8368feef",
@@ -5555,7 +5759,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "626316f1-7f30-4d97-8d6f-d8815425ef97",
@@ -5581,7 +5786,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "7108558c-076f-46e6-acd6-c7650c94cdb1",
@@ -5607,7 +5813,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "305bc39d-1bd3-4baf-955a-f4a4cc1970f0",
@@ -5633,7 +5840,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "1a198a85-41b7-4ab0-95ec-e00fb48b2633",
@@ -5658,7 +5866,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "71eb03a4-8fee-4f59-81b7-105005a72f68",
@@ -5684,7 +5893,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "71d2f0b8-222f-4a46-ae0e-c843afb3a48a",
@@ -5710,7 +5920,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "0eac0a2a-7c97-4e65-b13f-b55212f20ee7",
@@ -5736,7 +5947,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "9790c954-6a7c-4a8f-9c89-92178c001d9a",
@@ -5762,7 +5974,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "8836fd6e-d0a7-4018-b38a-bc5e28fb6ad0",
@@ -5788,7 +6001,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "db57e100-afa9-4318-86d3-788bb15b91d9",
@@ -5813,7 +6027,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "9ff59ea4-144b-4f08-b6b4-0f6ff5aa5a31",
@@ -5839,7 +6054,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "5179400f-0eae-4e19-ad90-a1363bea6816",
@@ -5865,7 +6081,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "85c86c6f-99f1-452b-bf0c-1edd9a0bcd77",
@@ -5891,7 +6108,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "50984c55-1110-4cf0-8a49-c3a2ffa95c5b",
@@ -5917,7 +6135,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "cd337d6d-b46d-4435-9cc0-d577ab9574ce",
@@ -5943,7 +6162,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "50d79884-f20d-424b-9a88-0a03420ce95e",
@@ -5969,7 +6189,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "5f5f0f1f-c50a-4edb-850e-8a55259afffc",
@@ -5995,7 +6216,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "d04ea154-6c45-4ba0-bcee-43704be3ebc7",
@@ -6021,7 +6243,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "881440e3-420a-4d49-859b-52f68329fd0f",
@@ -6047,7 +6270,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "d26db619-4fb6-44f6-bdab-7b630f92e03d",
@@ -6073,7 +6297,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "7f78d6f5-2d42-4ae4-8316-6ff76a3e34a4",
@@ -6099,7 +6324,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "b87e18b2-b69e-4057-b5d2-f38e8a66dab3",
@@ -6125,7 +6351,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "e2badc32-31a8-4de8-bb85-fc9aa2af7a8a",
@@ -6151,7 +6378,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "19845c9f-a9d8-4bc9-bacb-bbd4aba37e62",
@@ -6177,7 +6405,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "db7d8059-8f16-4e9b-8a42-6a458d03bf35",
@@ -6203,7 +6432,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "dc00b4b8-2020-4d0b-83e5-f552479400e5",
@@ -6229,7 +6459,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "43328f4d-9cc0-47d1-a7a7-a22760cdc0d9",
@@ -6255,7 +6486,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "3c64f9ce-0129-465f-83e6-ae5182b2cd26",
@@ -6281,7 +6513,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "e52389d1-08af-43ba-a7fd-7c4414dfde95",
@@ -6307,7 +6540,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "5d3ec4ec-3c58-4565-9581-05a68993db9c",
@@ -6333,7 +6567,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "df0d607b-7be7-4552-9685-6b37b6ff260a",
@@ -6359,7 +6594,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "f2e0e8c6-c1c5-41c3-a312-d5e9586c6fe4",
@@ -6385,7 +6621,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "2fac3863-8395-4801-b3de-f1db97358d13",
@@ -6411,7 +6648,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "fb038d35-c8b2-46c4-9607-f76c8544923d",
@@ -6437,7 +6675,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "dcec746d-9339-49c9-a202-d69e4bf6cff0",
@@ -6463,7 +6702,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "cd9454bf-aeb6-4dc0-8333-d1c3430645b8",
@@ -6489,7 +6729,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "50007647-49d6-4134-a930-a01ea6f499c2",
@@ -6515,7 +6756,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "003270d2-3f50-4600-a341-889f9505619b",
@@ -6541,7 +6783,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "f1039bbc-b1cc-455b-8f85-8c2394502375",
@@ -6567,7 +6810,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "db68aab2-d88d-4eae-be2f-e4bcd79b6232",
@@ -6593,7 +6837,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "1be94622-1861-497d-ab5a-04801282f5d0",
@@ -6619,7 +6864,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "f6c6d4b3-5753-4b9c-82f7-96afe4497c33",
@@ -6645,7 +6891,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "27c8a0ff-7e3e-44fb-955f-13dfa84e973f",
@@ -6670,7 +6917,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "ad0c7f2d-3452-4983-aa26-c962fee5a3e4",
@@ -6696,7 +6944,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "ae62bd82-b76a-439a-bfdd-bf8185aac0f4",
@@ -6721,7 +6970,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "c4dade3f-2b0e-44f9-9f3a-6bcde2dad315",
@@ -6746,7 +6996,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "64228cef-0b40-428f-8b26-e29db637c0aa",
@@ -6771,7 +7022,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "540ba67d-da32-4db7-a753-fe4696e7843e",
@@ -6797,7 +7049,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "2ae85d8d-fc0a-4a39-9a67-0107deada35f",
@@ -6823,7 +7076,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "63c77561-c41f-4d94-ae7e-21951057bd55",
@@ -6849,7 +7103,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "020dcd21-af57-42f2-940b-f3d931390b13",
@@ -6875,7 +7130,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "328b841b-5316-4bde-a579-69c63130080f",
@@ -6901,7 +7157,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "b3dd59c1-7069-4afd-8f8c-bcc5b3e145ae",
@@ -6927,7 +7184,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "fb79ad05-28bb-4604-a234-00ead442663c",
@@ -6953,7 +7211,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "5f253386-5e19-41fe-a35f-15c3a447d5a2",
@@ -6979,7 +7238,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "8b8d9c06-9556-4ac2-b2ee-bb962a6c513f",
@@ -7005,7 +7265,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "0c3e3ed0-1051-4b3f-a3a7-028f53a13f40",
@@ -7031,7 +7292,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "c7a35e2e-13cd-4825-9258-c3afdf859ad0",
@@ -7057,7 +7319,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "a183ce0e-196a-4437-b748-964befa6351b",
@@ -7083,7 +7346,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "ef80cad7-ef2b-4f7d-8fc0-3e7ee2b02f91",
@@ -7109,7 +7373,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "0a3df2ce-8e48-4368-a177-5fe5a26b774f",
@@ -7135,7 +7400,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "53df6dc8-24c2-46f4-9518-64e779ea0116",
@@ -7161,7 +7427,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "a66dd624-87f2-4113-99c7-1bcd095e948a",
@@ -7187,7 +7454,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "69482dff-a3c5-414b-84b6-1552d33c7e1b",
@@ -7213,7 +7481,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "f3b0dec3-e294-4699-8180-cc3713223a2e",
@@ -7239,7 +7508,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "71a02d4a-9b8a-4635-a6e2-38257ef1855a",
@@ -7265,7 +7535,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "ff5b9787-1762-4483-b7d5-e8f2a8ed4b4b",
@@ -7291,7 +7562,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "52e68ccb-3a2c-4c80-a1cc-73bbc85bb0ae",
@@ -7317,7 +7589,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "1693fd6e-e397-469b-97b2-3427fdc0102b",
@@ -7343,7 +7616,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "952568c9-d059-482e-b36f-5dd5e7e4f6ee",
@@ -7369,7 +7643,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "ddacefd3-2100-4c82-aee4-e16ccdbc4537",
@@ -7395,7 +7670,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "a330da73-6725-4911-95f2-24ca8feb19e1",
@@ -7421,7 +7697,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "cfda3b50-6187-4c5f-b47f-53fb8498d480",
@@ -7447,7 +7724,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "15d65144-2991-47f5-87cb-b76ac1db870a",
@@ -7473,7 +7751,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "47b7baac-ebbc-43e4-aa2d-9a2d44c87207",
@@ -7499,7 +7778,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "cbde9082-be54-43de-92fa-3889f22f1e39",
@@ -7525,7 +7805,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "ee3b2c5e-9ecf-4eaa-b0ac-a0d0332d124c",
@@ -7551,7 +7832,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "a7846dfb-aebc-4936-94c9-ca3993ca9915",
@@ -7577,7 +7859,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "5453fd90-c03e-4b79-bd88-9da7f79956fd",
@@ -7603,7 +7886,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "12510f63-d245-42e3-8844-41867a599452",
@@ -7629,7 +7913,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "8fd4c7fa-d4e7-45ee-9a44-fbdb85b7544c",
@@ -7655,7 +7940,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "e69f8271-25b6-4d1a-98b7-08a242ab8a82",
@@ -7681,7 +7967,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "5a2adadf-89ec-428b-9dbf-1809553ce17e",
@@ -7707,7 +7994,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "2056af01-95ab-4d30-9a4a-9b8a982a9996",
@@ -7733,7 +8021,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "4566acf2-027f-457e-ab8b-e0af6428cf33",
@@ -7759,7 +8048,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "a163a633-5a7d-44d8-8ccb-f62faab2b5a0",
@@ -7785,7 +8075,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "4b1dde2c-2198-46fd-b391-2c035140cd7c",
@@ -7811,7 +8102,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "34d35a2e-de14-44d6-a251-bd2975e9e44f",
@@ -7837,7 +8129,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "2c3a5d0f-2246-4d00-91b0-cca8f0f68fdd",
@@ -7863,7 +8156,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "98dfc9d5-dde6-4734-a377-8f0fc2de40c9",
@@ -7889,7 +8183,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "fd153da4-de62-451d-9708-19d44681c733",
@@ -7915,7 +8210,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "5d31683d-c2ba-453e-85fa-59bd13a06b37",
@@ -7941,7 +8237,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "c63033c8-a6d4-4470-b12b-4ccef28a471e",
@@ -7967,7 +8264,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "20fc271f-008c-40ed-b773-1ccc56115539",
@@ -7993,7 +8291,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "6a20d55e-32a3-4405-a2c6-738054c950e3",
@@ -8019,7 +8318,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "b1a92bcb-6e32-4f57-b900-221cd7d8036c",
@@ -8045,7 +8345,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "f0b91191-69ec-441b-81a7-df70e75c399a",
@@ -8071,7 +8372,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "8b8aa4db-4baa-4e77-84a1-474c8976f659",
@@ -8097,7 +8399,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "11bfa47e-a72f-47a4-a8ce-f7ecb89a49f3",
@@ -8123,7 +8426,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "5f0f00f9-25b3-41a9-a1e8-9d7663678488",
@@ -8149,7 +8453,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "1c163f74-0617-4003-80d8-2a76be2057b5",
@@ -8175,7 +8480,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "0ab7448a-f73f-457e-add6-5dcdd42840af",
@@ -8201,7 +8507,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "b491cda7-ba50-442f-bdf5-953014e11336",
@@ -8227,7 +8534,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "c7d25dac-7266-4715-9f4e-acf3f9e2fef3",
@@ -8253,7 +8561,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "d4a9dd84-0eb2-4702-a999-13be90cfb86a",
@@ -8279,7 +8588,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "80547f0d-de36-4078-870f-bfcb9a059884",
@@ -8304,7 +8614,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "fed1a3bd-6518-4e4f-b167-b189d3fa0bcf",
@@ -8330,7 +8641,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "7ae051fb-1d44-484f-b766-7a87fe058513",
@@ -8356,7 +8668,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "1852dd82-a194-4d57-9ea0-722493edb564",
@@ -8382,7 +8695,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "1a204da3-261c-47a2-a0c0-3ab8d65ca01b",
@@ -8408,7 +8722,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "929c38a5-fc9a-4bc3-804c-42ce656118f3",
@@ -8434,7 +8749,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "35dff045-c881-40dd-9275-300097930247",
@@ -8460,7 +8776,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "00fa023c-0d8a-4173-b739-3618935ed8dc",
@@ -8486,7 +8803,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "4f046497-e18a-4ad8-ab07-a1e2ff91799e",
@@ -8512,7 +8830,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "75d698f5-7276-4bd7-a511-3b7dc552d5a8",
@@ -8538,7 +8857,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "c9272644-bc8a-46c1-90ee-030c727fced3",
@@ -8564,7 +8884,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "1b5b1e65-d879-463c-b588-f5b1908ebb01",
@@ -8590,7 +8911,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "5fb35d02-db94-4bc4-bf46-a1365507e773",
@@ -8616,7 +8938,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "3f370c96-c695-49c3-8cce-8c852a86d594",
@@ -8642,7 +8965,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "b1191103-6a0f-4fb5-b59a-b02592509d86",
@@ -8668,7 +8992,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "ea62d5f3-f420-49ca-90ca-a5965b462b04",
@@ -8694,7 +9019,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "77c3887d-770b-4856-8f5e-3ecf5b2f95cd",
@@ -8720,7 +9046,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "c7c9c85a-6147-4c91-9779-a92759de2f5e",
@@ -8746,7 +9073,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "f68b416e-2d84-4dea-90fa-1a59fa8dce35",
@@ -8772,7 +9100,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "e82643c3-3870-4de9-9721-558009b88820",
@@ -8798,7 +9127,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "5f3869a9-b799-4ca3-91d3-ec02ea00842c",
@@ -8824,7 +9154,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "a8235881-8df6-4acd-b1f3-cddb344cc045",
@@ -8850,7 +9181,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "70cfe6f7-2856-4347-825d-7a797a5ed85c",
@@ -8876,7 +9208,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "b29fc4fe-0d9c-4530-8d64-232f884a8dbe",
@@ -8902,7 +9235,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "ad70ef12-bfb7-491f-a480-195eb4988b6c",
@@ -8928,7 +9262,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "a527a9ea-02f1-4e4d-810b-1056afaf0f1d",
@@ -8954,7 +9289,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "79abdab6-d0d4-453e-a32e-0ae80ba920df",
@@ -8980,7 +9316,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "7c9cdacc-3e1a-4824-8b67-1ff347aeed9d",
@@ -9006,7 +9343,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "2735adaa-f4f6-4c26-9b37-513ed857da79",
@@ -9032,7 +9370,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "ab6e43b4-476c-492a-abec-4f7a40fbf920",
@@ -9058,7 +9397,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "d56c9eb5-17a3-40dd-93aa-4fa1083b1dec",
@@ -9084,7 +9424,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "e9e51ddd-28c5-48e7-b52e-feafb7b8f060",
@@ -9110,7 +9451,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "d64982e8-442b-48bf-8351-b8f03e6fd8c7",
@@ -9136,7 +9478,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "98d4c8ed-7026-4f57-8495-fba26faad57b",
@@ -9162,7 +9505,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "378e2035-338d-4b8c-9e91-31d643985c89",
@@ -9188,7 +9532,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "a7bebd69-e26d-4951-9d4b-3882a50492b9",
@@ -9214,7 +9559,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "da60d330-1001-42e4-ba00-d44d18d5a1d2",
@@ -9240,7 +9586,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "c65197d4-6ba3-4b37-9f4a-1c68888d2b71",
@@ -9266,7 +9613,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "1c0b07c7-aaa1-4029-953a-f1fd3c287e3f",
@@ -9292,7 +9640,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "7a569b9e-f652-4203-8cd6-c73a0ccc7944",
@@ -9318,7 +9667,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "4be17446-96e5-4dbe-9e1d-6f90b3a0f4bf",
@@ -9344,7 +9694,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "d60b06cc-6fb9-4cd1-a9d0-1c51ced49a76",
@@ -9370,7 +9721,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "84c2d362-eb6b-483d-b30a-1580776fb983",
@@ -9396,7 +9748,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "38491721-f15a-4fdf-8efb-26e8f90a0d56",
@@ -9422,7 +9775,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "8847514c-713e-40ab-af32-ebb073890819",
@@ -9448,7 +9802,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "7c9c53fe-884a-48c3-b8a5-1629fd2f9ac9",
@@ -9474,7 +9829,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "644066ea-93f4-4795-b3e9-e2ca10395856",
@@ -9500,7 +9856,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "7b9755b8-947e-41ea-b76a-33a463c3f894",
@@ -9526,7 +9883,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "64b1fa08-e37d-4f5b-bce3-a47743e86707",
@@ -9551,7 +9909,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "c6d5c69c-ba69-4d9d-9971-1861e3c7219f",
@@ -9576,7 +9935,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "3c9d18eb-27bb-46bd-a81a-f9e491266afe",
@@ -9601,7 +9961,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "3f2f3b96-ddcb-4dec-a5ff-4b2c8d583613",
@@ -9626,7 +9987,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "7c1213f8-527f-4120-a798-b3dfc5c60469",
@@ -9651,7 +10013,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "45a0d9c6-5529-488c-90dd-90a2c70a9eaf",
@@ -9676,7 +10039,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "e50bbb6a-71d3-4f35-a79f-ba9225d1a95a",
@@ -9701,7 +10065,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "cab064aa-49f0-4bb6-ba93-7da4c8c555ca",
@@ -9726,7 +10091,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "25bb07db-1cf8-4137-bc43-6e2c9f760810",
@@ -9751,7 +10117,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "6adc0dfa-255a-48e8-a206-8af1a9bf8443",
@@ -9776,7 +10143,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "9a30cbc8-4ddb-411a-aa70-a180a25aa9b4",
@@ -9801,7 +10169,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "b47e6a8c-c8c7-4146-8881-59e1c5b489a4",
@@ -9826,7 +10195,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "fa7b017a-9fe4-4a38-87e8-bed5919e43ce",
@@ -9851,7 +10221,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "96f39f7d-edbf-4b89-b0c1-6c66f76ed881",
@@ -9876,7 +10247,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "0fb25d70-57fd-45d7-8b80-326192361423",
@@ -9901,7 +10273,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "f2799b33-fb5f-41be-9231-40120b8de62d",
@@ -9926,7 +10299,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "43e2d960-a2cd-4391-895f-55dd3fedd559",
@@ -9951,7 +10325,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "8319f21d-ac18-49e0-9833-253b33ce9175",
@@ -9976,7 +10351,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "fcd3c005-79d9-448d-9270-09ad32e71102",
@@ -10001,7 +10377,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "17fcb239-b042-4518-a332-e838a7c36d37",
@@ -10026,7 +10403,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "8c5f856e-ad3a-4d22-a7bd-11488b35705b",
@@ -10052,7 +10430,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "70242da7-6e46-45b1-a080-4aaac89b4948",
@@ -10078,7 +10457,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "7f98c83f-2b13-4061-a1fc-d446c32b6d94",
@@ -10103,7 +10483,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "68b6e001-fb29-4240-8dc1-680abccba468",
@@ -10128,7 +10509,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "72d2808a-a6a5-46ec-96f1-09f7ab798aa5",
@@ -10153,7 +10535,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "fcd21d8e-a89c-4208-9817-6063c9641f87",
@@ -10178,7 +10561,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "f6fbffa0-3379-4f35-9395-1a38971a6514",
@@ -10203,7 +10587,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "bc76ceb1-e58c-492b-a6d7-ef1e3f83b3e8",
@@ -10228,7 +10613,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "4e208f6d-ef88-4dba-951b-c16bad18c265",
@@ -10253,7 +10639,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "e1473996-35d6-4173-93d2-0670b48a2b36",
@@ -10278,7 +10665,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "6068960d-f89a-4281-a006-ced6f8147856",
@@ -10303,7 +10691,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "33f3bc78-7a20-4ae4-aab2-f27de694870f",
@@ -10328,7 +10717,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "4e9b38ad-da2c-4d88-9b8f-a32f22c43d6c",
@@ -10353,7 +10743,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "1628ffbf-e850-41e3-8eab-496d57002b69",
@@ -10378,7 +10769,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "d5ed56a6-592f-43a9-8f39-e79c44523919",
@@ -10403,7 +10795,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "36352805-0074-4c31-839d-6b13f795f828",
@@ -10428,7 +10821,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "aeb51f08-6b3b-47e7-beaa-c5eea789cd78",
@@ -10453,7 +10847,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "b8a997cc-6f0e-4438-a977-68b9289897d9",
@@ -10478,7 +10873,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "1c81471e-31cd-45d8-af77-406afae4a81f",
@@ -10503,7 +10899,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "52bfb411-5cc1-4ec9-a31f-205702fd65ea",
@@ -10528,7 +10925,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "dbf9acc7-5089-434c-a57e-c24523fabe92",
@@ -10553,7 +10951,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "1b67368e-4293-4af3-872c-c5c9db031eca",
@@ -10578,7 +10977,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "ec2db976-6e99-4c47-b2d5-c6c29d2cbd7c",
@@ -10603,7 +11003,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "d7ff8b29-068c-41b8-97af-afc32cbe607d",
@@ -10628,7 +11029,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "951ac241-cdb5-4367-a3a8-6fa4fc787c32",
@@ -10654,7 +11056,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "4249608c-4892-4677-b40b-1d9d601bdda4",
@@ -10679,7 +11082,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "152ea20d-4bd1-41d1-bf1d-8d2bb9aeed12",
@@ -10704,7 +11108,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "2175d06a-6065-4e41-9fb2-2a2f884a55f1",
@@ -10730,7 +11135,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "d380ed6f-9039-4030-a3b4-32e45ebf7bbb",
@@ -10755,7 +11161,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "b31ebe63-63af-4ec2-88d8-5187ccfd0c3d",
@@ -10780,7 +11187,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "0794a77f-0df2-4815-a2bb-84de4365c2c4",
@@ -10805,7 +11213,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "32627b11-06fb-49cb-af5b-a13bc4f1179b",
@@ -10830,7 +11239,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "729d271c-9f2e-47b4-9ff6-540d29ecb848",
@@ -10856,7 +11266,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "647f49d5-d1d0-44a4-82e7-6a8ae0aba942",
@@ -10882,7 +11293,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "099db885-b23b-4572-9de0-5b0fa835f8ed",
@@ -10908,7 +11320,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "93015394-cf92-4223-b828-6d70d2ed1e0a",
@@ -10934,7 +11347,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "de0eacad-3072-4dfb-a805-bb8d152773a3",
@@ -10960,7 +11374,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "237edf16-4744-4ffa-a7ca-1cac3a095df0",
@@ -10986,7 +11401,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "5b446914-dd8b-40bf-a2a6-b879db496098",
@@ -11012,7 +11428,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "a062ad5c-f8f7-44d8-b0d3-4cef2f3b9203",
@@ -11038,7 +11455,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "4140d910-99ae-4dad-981d-cdb63184ff60",
@@ -11064,7 +11482,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "da3ee991-3950-4e68-8d5c-f9751f0efa93",
@@ -11090,7 +11509,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "c7e538e9-69d4-4f18-a5fe-93e9eb4f24ef",
@@ -11116,7 +11536,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "39c67860-8ea2-4f44-b22c-4ad063f101c4",
@@ -11142,7 +11563,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "60bd7569-26ee-4e07-baf2-1052365c078f",
@@ -11168,7 +11590,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "9d52619f-9cb5-4874-9b4b-bb77170db3c7",
@@ -11194,7 +11617,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "b6e64bac-acb2-40bc-a4a7-53054d2926c3",
@@ -11220,7 +11644,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "64e5806d-948d-4b88-b491-184eca83fec3",
@@ -11246,7 +11671,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "7a76b571-cb5f-46f9-997b-15c0366bed2d",
@@ -11272,7 +11698,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "66802b24-60d6-4b09-865a-2f55c778e1fb",
@@ -11298,7 +11725,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "efd6da1a-8cd1-4f9c-9dc9-b326532862ae",
@@ -11324,7 +11752,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "fb796508-979b-460f-ab42-0b79c4a1cfeb",
@@ -11350,7 +11779,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "c9685ac8-aa00-4128-bcf3-4971aa51ce15",
@@ -11376,7 +11806,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "451012a1-be21-4df3-9ec7-292f8959cfd0",
@@ -11402,7 +11833,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "bfb9526f-4ab8-425f-b074-5ed8b7eb1db5",
@@ -11428,7 +11860,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "pivoting"
   },
   {
     "id": "783b5107-31d7-43cc-8eaa-47d14a7c8ded",
@@ -11454,7 +11887,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "relational_division"
   },
   {
     "id": "0d464fe4-4155-43a5-8192-26a4e0356022",
@@ -11480,7 +11914,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "22e991d7-9966-4f82-9a93-22d2ab498e4d",
@@ -11506,7 +11941,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "335d62fd-a91e-483c-b36d-b09ab55b9454",
@@ -11532,7 +11968,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "a661f4c9-abfa-451f-8fae-0eeb4962abe4",
@@ -11558,7 +11995,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "70320245-b72c-4421-8e37-d15e7f1e435c",
@@ -11584,7 +12022,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "56f62326-f114-42e0-8f2f-b8f8f3aef1d5",
@@ -11610,7 +12049,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "509bfc4b-6e65-4312-932e-74ae5b346899",
@@ -11636,7 +12076,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "6d318704-be15-4b79-92ed-c2a4810b4bbc",
@@ -11662,7 +12103,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "9c5c5fdf-2e4d-4618-a112-7d583de526d7",
@@ -11688,7 +12130,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "a698d926-8b29-489f-b8a1-fb62ce123ce3",
@@ -11714,7 +12157,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "9f90f6b8-7d3f-4573-967f-9fbdc7b39489",
@@ -11740,7 +12184,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "24cd3012-7d45-4fcf-932f-4f95876dd9c2",
@@ -11766,7 +12211,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "60958bb7-9994-40c0-945c-229e670e43a5",
@@ -11792,7 +12238,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "9d2c96cd-1733-4123-8d72-5cd9b242fe19",
@@ -11818,7 +12265,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "c0d3fbe8-d326-461c-aa55-82f36abbe5db",
@@ -11844,7 +12292,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "ea738b1a-0fd3-48cd-bd7f-be59bda453fc",
@@ -11870,7 +12319,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "ef7a4f20-deec-4f00-aa37-9fe0d37d61ca",
@@ -11896,7 +12346,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "d18a654c-a59d-49c9-9702-efd4ff9fde35",
@@ -11922,7 +12373,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "5f34c580-d38a-491a-a698-dc69367c7837",
@@ -11948,7 +12400,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "2cf4b5dc-f071-42b1-9385-d3f1ab4ecf1f",
@@ -11974,7 +12427,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "4ccf9f58-ca7e-4415-82d8-31bd8645f45d",
@@ -12000,7 +12454,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "0c3a8f0a-e1fa-472c-ae9b-5b5047081d72",
@@ -12026,7 +12481,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "5f1fdeed-99e7-400f-9bc8-04caf7452ce0",
@@ -12052,7 +12508,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "0a059f7c-ebf6-4a31-b6e1-02cce9cf3199",
@@ -12078,7 +12535,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "24505013-eab8-47a9-9058-f525c0be3704",
@@ -12104,7 +12562,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "12fb85a3-a729-45ea-b7b7-1a750209f094",
@@ -12130,7 +12589,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "5dbc7d2a-abd3-4ce1-8a3e-b8458d8571d7",
@@ -12156,7 +12616,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "f8d00990-95ea-4c2c-9729-2851e9853e26",
@@ -12182,7 +12643,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "4eafb261-12c2-4f31-9a2d-df9a3a97627e",
@@ -12208,7 +12670,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "45d96223-9020-405f-8b6c-7bcf10231c94",
@@ -12234,7 +12697,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "1a021352-d5f3-42e6-b8ba-eea8a7176823",
@@ -12260,7 +12724,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "7918fc5c-c52b-4fcf-a697-32e845e1626e",
@@ -12286,7 +12751,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "f384fe4a-5b6d-45f1-af33-67f6abea2478",
@@ -12312,7 +12778,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "2c4f2257-565f-4157-8c64-d7c785a68f45",
@@ -12338,7 +12805,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "eb641619-7005-4f5d-975f-21d32159f53d",
@@ -12364,7 +12832,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "d51b7f13-3cb2-4745-be35-302775347e89",
@@ -12390,7 +12859,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "9e991f12-f38b-4b6b-ab7e-e5d81c724301",
@@ -12416,7 +12886,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "7c67816c-581e-4884-926d-4878189941be",
@@ -12442,7 +12913,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "a3fcbe14-c779-4f06-87ae-ed34886bbeec",
@@ -12468,7 +12940,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "068b9034-f8bb-4caf-8819-53bed934df57",
@@ -12494,7 +12967,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "b2f39f62-4f1c-48f6-8dfa-dc97cc89b03e",
@@ -12520,7 +12994,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "4779c368-bbff-4187-896a-2962c0788355",
@@ -12546,7 +13021,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "6828cc8f-c4fa-4e18-ba82-52dad08d8b95",
@@ -12572,7 +13048,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "b93553c7-c0f1-4ed3-ba4f-54e045eb26c7",
@@ -12598,7 +13075,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "1d04338e-96d1-4000-933b-ad1eb6ea5bc4",
@@ -12624,7 +13102,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "511252cc-ba16-4ce3-8788-d76ba9ffbb61",
@@ -12650,7 +13129,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "retrieval"
   },
   {
     "id": "62fe3d6e-74f8-4940-a435-491b9001923c",
@@ -12676,7 +13156,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "7c392374-abd5-4eec-87c7-6860eb8e728c",
@@ -12702,7 +13183,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "f86e2e96-4cc1-496e-a5c9-6811f0077487",
@@ -12728,7 +13210,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "ebfd4f2f-7613-4e25-b58a-6ac9d05f270a",
@@ -12754,7 +13237,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "modification"
   },
   {
     "id": "1cbae68d-5871-4e73-9781-9f775d8a81d7",
@@ -12780,7 +13264,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex_join"
   },
   {
     "id": "a930864c-30f6-4b17-b760-e198578b0139",
@@ -12806,7 +13291,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "9b55dfaa-9200-4cc5-a2da-9ff43b829926",
@@ -12832,7 +13318,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "d1237dd7-ef5c-42dd-a95a-3259b05270ae",
@@ -12858,7 +13345,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "55296717-592f-47ac-984f-00f6446d030b",
@@ -12884,7 +13372,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "d8aff4f9-0a38-43c5-a128-a357e52b83bf",
@@ -12910,7 +13399,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "7f315e19-5943-4c50-bdd6-e2382b3e8082",
@@ -12936,7 +13426,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "968e3457-a339-4f0c-93bd-38b163f397ab",
@@ -12962,7 +13453,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "grouping_having"
   },
   {
     "id": "3327de94-5acb-439b-9dd3-f2f899b8565b",
@@ -12988,7 +13480,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "6264ebf1-26dd-4fe2-9b5b-5686e979f590",
@@ -13013,7 +13506,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "97d3313f-82c1-4b03-9244-fe1b4cd4a5eb",
@@ -13039,7 +13533,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "b932308d-6fe7-4feb-ae5e-abb575430d67",
@@ -13065,7 +13560,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "1dda24d9-efc9-40bd-bb17-deb4296f02eb",
@@ -13091,7 +13587,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "aggregation"
   },
   {
     "id": "9a88df4b-dd5d-4e4f-812b-046ddd0580cb",
@@ -13117,7 +13614,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "set_operations"
   },
   {
     "id": "00db97a0-335a-48fa-979c-ecac89648b29",
@@ -13143,7 +13641,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   },
   {
     "id": "a96f0617-4306-414d-bdea-9d2bedee2518",
@@ -13169,7 +13668,8 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "filtering"
   },
   {
     "id": "002e974f-effa-46dc-9b44-0917209091a8",
@@ -13195,6 +13695,7 @@
           "name": "Mysql"
         }
       }
-    ]
+    ],
+    "customSort": "complex"
   }
 ]

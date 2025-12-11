@@ -29,6 +29,15 @@ const Dashboard = () => {
         }
     });
 
+    const [customSort, setCustomSort] = useState(() => {
+        try {
+            return localStorage.getItem('dashboard_customsort_filter') || 'ALL';
+        } catch (e) {
+            return 'ALL';
+        }
+    });
+    const [customSortOptions, setCustomSortOptions] = useState(['ALL']);
+
     // cache for all problems and statuses to avoid repeated API calls when paging
     const allCacheRef = useRef({ key: '', data: [] });
     const statusesCacheRef = useRef({ key: '', map: {} });
@@ -44,6 +53,7 @@ const Dashboard = () => {
                 const params = { page, size };
                 if (searchTerm) params.keyword = searchTerm;
                 if (typeFilter && typeFilter !== 'ALL') params.type = typeFilter;
+                if (customSort && customSort !== 'ALL') params.customSort = customSort;
 
                 const response = await localProblemsApi.search(params);
 
@@ -75,7 +85,7 @@ const Dashboard = () => {
 
             // When a status filter is active, fetch all problems and compute pagination client-side
             // Include typeFilter in cache key so changing type invalidates the cache
-            const cacheKey = `${searchTerm || '__all__'}::${typeFilter || 'ALL'}`;
+            const cacheKey = `${searchTerm || '__all__'}::${typeFilter || 'ALL'}::${customSort || 'ALL'}`;
             let all = [];
             if (allCacheRef.current.key === cacheKey && Array.isArray(allCacheRef.current.data)) {
                 all = allCacheRef.current.data;
@@ -97,6 +107,11 @@ const Dashboard = () => {
             if (typeFilter && typeFilter !== 'ALL') {
                 const want = String(typeFilter).toUpperCase();
                 all = all.filter((p) => String(p.type || '').toUpperCase() === want);
+            }
+            // apply customSort filter before status filtering/pagination
+            if (customSort && customSort !== 'ALL') {
+                const want = String(customSort).toLowerCase();
+                all = all.filter((p) => String(p.customSort || '').toLowerCase() === want);
             }
             const ids = all.map((p) => p.id);
             const token = localStorage.getItem('db_ptit_token');
@@ -155,12 +170,12 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchQuestions();
-    }, [page, searchTerm, filter, typeFilter]);
+    }, [page, searchTerm, filter, typeFilter, customSort]);
 
     // reset to first page when filter or search changes
     useEffect(() => {
         setPage(1);
-    }, [filter, searchTerm, typeFilter]);
+    }, [filter, searchTerm, typeFilter, customSort]);
 
     // persist filter selection
     useEffect(() => {
@@ -179,6 +194,37 @@ const Dashboard = () => {
             // ignore
         }
     }, [typeFilter]);
+
+    // persist customSort selection
+    useEffect(() => {
+        try {
+            localStorage.setItem('dashboard_customsort_filter', customSort);
+        } catch (e) {
+            // ignore
+        }
+    }, [customSort]);
+
+    // Load available customSort options once (lazy). We read all problems and extract distinct customSort values.
+    useEffect(() => {
+        let mounted = true;
+        (async () => {
+            try {
+                const resp = await localProblemsApi.getAll();
+                const all = resp.data || [];
+                const set = new Set();
+                all.forEach((p) => {
+                    if (p.customSort && String(p.customSort).trim()) set.add(String(p.customSort).trim());
+                });
+                const arr = Array.from(set).filter(Boolean).sort();
+                if (mounted) setCustomSortOptions(['ALL', ...arr]);
+            } catch (err) {
+                // ignore option load failures
+            }
+        })();
+        return () => {
+            mounted = false;
+        };
+    }, []);
 
     // derived count for UI when filter is active
     const showingCount = filteredTotal || questions.length;
@@ -240,7 +286,7 @@ const Dashboard = () => {
             ) : (
                 <>
                     <div className="flex items-center justify-between mb-4 gap-4">
-                        <div className="flex items-center gap-20">
+                        <div className="flex flex-col justify-center flex-wrap gap-5">
                             <div className="flex items-center gap-2">
                                 <span className="text-sm text-text-muted mr-2">Filter:</span>
                                 {['ALL', 'AC', 'WA', 'TLE', 'CE', 'NA'].map((opt) => (
@@ -279,6 +325,23 @@ const Dashboard = () => {
                                         {t === 'ALL' ? 'All' : t}
                                     </button>
                                 ))}
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-sm text-text-muted mr-2">Custom:</span>
+                                <select
+                                    value={customSort}
+                                    onChange={(e) => {
+                                        setCustomSort(e.target.value);
+                                        setPage(1);
+                                    }}
+                                    className="text-sm px-3 py-1 rounded-full bg-white/3 text-text-muted border-transparent hover:bg-white/5"
+                                >
+                                    {customSortOptions.map((opt) => (
+                                        <option key={opt} value={opt} className="bg-bg-panel text-sm">
+                                            {opt === 'ALL' ? 'All' : opt}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                         </div>
 
