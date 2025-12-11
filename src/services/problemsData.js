@@ -43,7 +43,7 @@ export const localProblemsApi = {
     /**
      * Search problems with pagination and optional keyword filter
      */
-    search: ({ page = 1, size = 12, keyword = '' }) => {
+    search: ({ page = 1, size = 12, keyword = '', type } = {}) => {
         let filtered = [...problemsList];
 
         if (keyword) {
@@ -52,6 +52,11 @@ export const localProblemsApi = {
                 (p) =>
                     p.title.toLowerCase().includes(lowerKeyword) || p.questionCode.toLowerCase().includes(lowerKeyword),
             );
+        }
+
+        if (type && String(type).toUpperCase() !== 'ALL') {
+            const want = String(type).toUpperCase();
+            filtered = filtered.filter((p) => String(p.type || '').toUpperCase() === want);
         }
 
         const totalElements = filtered.length;

@@ -38,56 +38,12 @@ const Dashboard = () => {
             setLoading(true);
 
             const size = 12;
-            // If no status filter, use paginated local search unless a type filter is active
+            // If no status filter, use paginated local search. Include `typeFilter` as a search param
+            // so we don't need to fetch the entire dataset on every type change.
             if (!filter || filter === 'ALL') {
-                // If typeFilter is active, fetch all and paginate client-side to allow accurate counts
-                if (typeFilter && typeFilter !== 'ALL') {
-                    const allResp = await localProblemsApi.getAll();
-                    let all = allResp.data || [];
-                    if (searchTerm) {
-                        const lowerKeyword = searchTerm.toLowerCase();
-                        all = all.filter(
-                            (p) =>
-                                p.title.toLowerCase().includes(lowerKeyword) ||
-                                p.questionCode.toLowerCase().includes(lowerKeyword),
-                        );
-                    }
-                    const want = String(typeFilter).toUpperCase();
-                    all = all.filter((p) => String(p.type || '').toUpperCase() === want);
-
-                    const totalElements = all.length;
-                    const totalPagesCalc = Math.max(1, Math.ceil(totalElements / size));
-                    setTotalPages(totalPagesCalc);
-                    setFilteredTotal(totalElements);
-
-                    const boundedPage = Math.min(Math.max(1, page), totalPagesCalc);
-                    const start = (boundedPage - 1) * size;
-                    const pageContent = all.slice(start, start + size);
-                    setQuestions(pageContent);
-
-                    // Fetch statuses for visible items
-                    const ids = pageContent.map((q) => q.id);
-                    const token = localStorage.getItem('db_ptit_token');
-                    if (token && ids.length > 0) {
-                        try {
-                            const statusResp = await executorApi.checkComplete(ids);
-                            const map = {};
-                            (statusResp.data || []).forEach((s) => {
-                                map[s.questionId] = s.status;
-                            });
-                            setStatuses(map);
-                        } catch (err) {
-                            setStatuses({});
-                        }
-                    } else {
-                        setStatuses({});
-                    }
-
-                    return;
-                }
-
                 const params = { page, size };
                 if (searchTerm) params.keyword = searchTerm;
+                if (typeFilter && typeFilter !== 'ALL') params.type = typeFilter;
 
                 const response = await localProblemsApi.search(params);
 
@@ -118,7 +74,8 @@ const Dashboard = () => {
             }
 
             // When a status filter is active, fetch all problems and compute pagination client-side
-            const cacheKey = searchTerm || '__all__';
+            // Include typeFilter in cache key so changing type invalidates the cache
+            const cacheKey = `${searchTerm || '__all__'}::${typeFilter || 'ALL'}`;
             let all = [];
             if (allCacheRef.current.key === cacheKey && Array.isArray(allCacheRef.current.data)) {
                 all = allCacheRef.current.data;
@@ -289,7 +246,10 @@ const Dashboard = () => {
                                 {['ALL', 'AC', 'WA', 'TLE', 'CE', 'NA'].map((opt) => (
                                     <button
                                         key={opt}
-                                        onClick={() => setFilter(opt)}
+                                        onClick={() => {
+                                            setFilter(opt);
+                                            setPage(1);
+                                        }}
                                         className={`text-sm px-3 py-1 rounded-full transition-colors border ${
                                             filter === opt
                                                 ? 'bg-primary text-white border-primary'
@@ -306,7 +266,10 @@ const Dashboard = () => {
                                 {['ALL', 'SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'ALTER', 'DROP'].map((t) => (
                                     <button
                                         key={t}
-                                        onClick={() => setTypeFilter(t)}
+                                        onClick={() => {
+                                            setTypeFilter(t);
+                                            setPage(1);
+                                        }}
                                         className={`text-sm px-2 py-1 rounded-full transition-colors border ${
                                             typeFilter === t
                                                 ? 'bg-white text-bg-panel border-white/10' // subtle active

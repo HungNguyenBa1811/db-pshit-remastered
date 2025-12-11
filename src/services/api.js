@@ -1,5 +1,5 @@
 import axios from 'axios';
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 const api = axios.create({
     baseURL: '/api',
@@ -70,9 +70,10 @@ api.interceptors.response.use(
                             if (newRefresh) localStorage.setItem('db_ptit_refresh', newRefresh);
                             api.defaults.headers.Authorization = `Bearer ${newAccess}`;
                             try {
-                                window.dispatchEvent(new CustomEvent('token_refreshed', { detail: { token: newAccess } }));
-                            } catch (e) {
-                            }
+                                window.dispatchEvent(
+                                    new CustomEvent('token_refreshed', { detail: { token: newAccess } }),
+                                );
+                            } catch (e) {}
                             onRefreshed(newAccess);
                         } else {
                             localStorage.removeItem('db_ptit_token');
